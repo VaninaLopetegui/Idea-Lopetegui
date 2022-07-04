@@ -121,7 +121,7 @@ header {
     }
 }
 /*--      responsive de header desktop grande   --*/
-@media (min-width:1025px ) and (max-width:1440px ) {
+@media (min-width:1025px ) and (max-width:1440px) {
     header {
         font-size: 1.8rem;
     }
@@ -133,6 +133,39 @@ header {
     }
     .navbar-ul li a {
         padding: 14px;
+    }
+}
+@media (min-width:1441px ) and (max-width:1900px) {
+    header {
+        font-size: 1.8rem;
+    }
+    .navbar{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .navbar-ul li a {
+        padding: 14px;
+    }
+}
+@media (min-width:1901px ) and (max-width:3000px) {
+    header {
+        font-size: 2.5rem;
+        height: 120px;
+    }
+    .navbar{
+        height: 120px;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .navbar-ul li a {
+        padding: 50px;
+    }
+    .imagen-gato-header img{
+        width: 120px;
     }
 }
 /*--           footer general            --*/
@@ -183,6 +216,16 @@ footer {
 @media (min-width:761px ) and (max-width: 1024px ) {
     footer {
         font-size: 18px;
+    }
+}
+@media (min-width:1441px ) and (max-width:1885px) {
+    footer {
+        font-size: 1rem;
+    }
+}
+@media (min-width:1901px ) and (max-width:3000px) {
+    footer {
+        font-size: 1.5rem;
     }
 }
 /*--          index.html        --*/
@@ -255,7 +298,7 @@ footer {
 /*--       responsive de index.html celular grande        --*/
 @media (min-width:480px ) and (max-width:741px ) {
     .contenedor-index {
-        height: 82.1vh;
+        height: 82.2vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
@@ -284,7 +327,7 @@ footer {
 /*--       responsive de index.html tablet        --*/
 @media (min-width:742px ) and (max-width:760px ) {
     .contenedor-index {
-        height: 80.9vh;
+        height: 81vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
@@ -306,7 +349,7 @@ footer {
 /*--       responsive de index.html desktop        --*/
 @media (min-width:761px ) and (max-width: 1024px ) {
     .contenedor-index {
-        height: 83.2vh;
+        height: 81vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
@@ -332,7 +375,7 @@ footer {
 /*--      responsive de header desktop grande   --*/
 @media (min-width:1025px ) and (max-width:1440px ) {
     .contenedor-index {
-        height: 82.3vh;
+        height: 81vh;
         display: grid;
         grid-template-columns: 1.6fr 3fr 1fr;
         grid-template-rows: 1fr;
@@ -346,6 +389,56 @@ footer {
     .boton-der-index img{
         width: 120px;
         height: 120px;
+    }
+}
+@media (min-width:1441px ) and (max-width:1885px) {
+    .contenedor-index {
+        height: 81vh;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .titulo-index {
+        font-size: 3rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .boton-der-index {
+        padding-right: 5%;
+    }
+    .boton-der-index img{
+        width: 100px;
+        height: 100px;
+    }
+    .logotipo-index img{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (min-width:1901px ) and (max-width:3000px) {
+    .contenedor-index {
+        height: 84.2vh;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .titulo-index {
+        font-size: 5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .boton-der-index {
+        padding-right: 5%;
+    }
+    .boton-der-index img{
+        width: 150px;
+        height: 150px;
+    }
+    .logotipo-index img{
+        width: 200px;
+        height: 200px;
     }
 }
 /*--      quiensoy.html     --*/
