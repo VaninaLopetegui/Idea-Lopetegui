@@ -191,6 +191,7 @@ footer {
     display: grid;
     grid-template-columns: 1.8fr 3fr 1fr;
     grid-template-rows: 1fr;
+    overflow-y:hidden;
 }
 .logotipo-index {
     display: flex;
@@ -222,7 +223,7 @@ footer {
 /*--       responsive de index.html celular chico        --*/
 @media (min-width:320px ) and (max-width:479px ) {
     .contenedor-index {
-        height: 79.2vh;
+        height: 82vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
@@ -255,7 +256,7 @@ footer {
 /*--       responsive de index.html celular grande        --*/
 @media (min-width:480px ) and (max-width:741px ) {
     .contenedor-index {
-        height: 82.1vh;
+        height: 83.2vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
@@ -284,7 +285,7 @@ footer {
 /*--       responsive de index.html tablet        --*/
 @media (min-width:742px ) and (max-width:760px ) {
     .contenedor-index {
-        height: 80.9vh;
+        height: 83.2vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
@@ -1236,80 +1237,12 @@ footer {
 }
 /*--       contacto.html      --*/
 .contenedor-contacto {
-    height: 82.1vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 5fr 2fr;
+    height: 85.6vh;
 }
-.formulario-contacto {
-    grid-column: 2/4;
-    grid-row: 2/3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 2fr;
-    border: 10px groove rgba(127, 255, 212, 0.521);
-}
-.imagen-formulario-contacto {
-    background-color: pink;
-    grid-column: 1/2;
-    grid-row: 1/5;
-}
-.preguntas-formulario-contacto {
-    background-color: rgba(127, 255, 212, 0.521);
-    grid-column: 2/3;
-    grid-row: 1/5;
-}
-.titulo-contacto {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Bungee', cursive;
-}
-.nombre-contacto {
-    font-family: 'Bungee', cursive;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: white;
-}
-.gmail-contacto {
-    font-family: 'Bungee', cursive;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: white;
-}
-.mensaje-contacto {
-    font-family: 'Bungee', cursive;
-    font-size: 20px;
-    color: white;
-}
-.mensaje-contacto p{
-    margin-left: 50px;
-}
-.mensaje-contacto textarea{
-    margin-left: 50px;
-    display: block;
-}
-.mensaje-contacto .boton-enviar{
-    display: inline;
-    margin-left: 50px;
-}
-.mensaje-contacto .boton-borrar{
-    margin-left: 0;
-}
+textarea {
+    resize: none;
+} 
 .boton-iz-contacto {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding: 5%;
-}
-.boton-iz-contacto img {
     width: 100px;
     height: 100px;
 }
