@@ -121,7 +121,7 @@ header {
     }
 }
 /*--      responsive de header desktop grande   --*/
-@media (min-width:1025px ) and (max-width:1440px ) {
+@media (min-width:1025px ) and (max-width:1440px) {
     header {
         font-size: 1.8rem;
     }
@@ -135,11 +135,44 @@ header {
         padding: 14px;
     }
 }
+@media (min-width:1441px ) and (max-width:1900px) {
+    header {
+        font-size: 1.8rem;
+    }
+    .navbar{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .navbar-ul li a {
+        padding: 14px;
+    }
+}
+@media (min-width:1901px ) and (max-width:3000px) {
+    header {
+        font-size: 2.5rem;
+        height: 120px;
+    }
+    .navbar{
+        height: 120px;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .navbar-ul li a {
+        padding: 50px;
+    }
+    .imagen-gato-header img{
+        width: 120px;
+    }
+}
 /*--           footer general            --*/
 footer {
     background-color: black;
     height: 7.3vh;
-    font-size: 1rem;
+    font-size: 1.5rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
@@ -185,11 +218,21 @@ footer {
         font-size: 18px;
     }
 }
+@media (min-width:1441px ) and (max-width:1885px) {
+    footer {
+        font-size: 1rem;
+    }
+}
+@media (min-width:1886px ) and (max-width:1920px){
+    footer {
+        font-size: 1.5rem;
+    }
+}
 /*--          index.html        --*/
 .contenedor-index {
-    height: 82.1vh;
+    height: 84.2vh;
     display: grid;
-    grid-template-columns: 1.8fr 3fr 1fr;
+    grid-template-columns: 2.4fr 3fr 1fr;
     grid-template-rows: 1fr;
     overflow-y:hidden;
 }
@@ -199,11 +242,11 @@ footer {
     align-items: center;
 }
 .logotipo-index img {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
 }
 .titulo-index {
-    font-size: 4rem;
+    font-size: 6rem;
     font-family: 'Press Start 2P', cursive;
     color: white;
     display: flex;
@@ -217,13 +260,13 @@ footer {
     padding-right: 5%;
 }
 .boton-der-index img{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 /*--       responsive de index.html celular chico        --*/
 @media (min-width:320px ) and (max-width:479px ) {
     .contenedor-index {
-        height: 82vh;
+        height: 80.3vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
@@ -256,7 +299,7 @@ footer {
 /*--       responsive de index.html celular grande        --*/
 @media (min-width:480px ) and (max-width:741px ) {
     .contenedor-index {
-        height: 83.2vh;
+        height: 83vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
@@ -270,6 +313,10 @@ footer {
         display: flex;
         justify-content: center;
         align-items: flex-end;
+    }
+    .logotipo-index img {
+        width: 150px;
+        height: 150px;
     }
     .boton-der-index {
         display: flex;
@@ -285,7 +332,7 @@ footer {
 /*--       responsive de index.html tablet        --*/
 @media (min-width:742px ) and (max-width:760px ) {
     .contenedor-index {
-        height: 83.2vh;
+        height: 81.8vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
@@ -300,14 +347,22 @@ footer {
         justify-content: center;
         align-items: flex-end;
     }
+    .logotipo-index img {
+        width: 150px;
+        height: 150px;
+    }
     .boton-der-index {
         padding-right: 2%;
+    }
+    .boton-der-index img{
+        width: 85px;
+        height: 85px;
     }
 }
 /*--       responsive de index.html desktop        --*/
 @media (min-width:761px ) and (max-width: 1024px ) {
     .contenedor-index {
-        height: 83.2vh;
+        height: 81.8vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
@@ -322,31 +377,89 @@ footer {
         justify-content: center;
         align-items: flex-end;
     }
+    .logotipo-index img {
+        width: 150px;
+        height: 150px;
+    }
     .boton-der-index {
         padding-right: 2%;
     }
     .boton-der-index img{
-        width: 115px;
-        height: 115px;
+        width: 85px;
+        height: 85px;
     }
 }
 /*--      responsive de header desktop grande   --*/
 @media (min-width:1025px ) and (max-width:1440px ) {
     .contenedor-index {
-        height: 82.3vh;
+        height: 81.8vh;
         display: grid;
-        grid-template-columns: 1.6fr 3fr 1fr;
+        grid-template-columns: 1.6fr 3fr 0.5fr;
         grid-template-rows: 1fr;
     }
     .titulo-index {
         font-size: 3.2rem;
     }
+    .logotipo-index img {
+        width: 150px;
+        height: 150px;
+    }
     .boton-der-index {
         padding-right: 5%;
     }
     .boton-der-index img{
-        width: 120px;
-        height: 120px;
+        width: 85px;
+        height: 85px;
+    }
+}
+@media (min-width:1441px ) and (max-width:1885px) {
+    .contenedor-index {
+        height: 81.8vh;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .titulo-index {
+        font-size: 3rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .boton-der-index {
+        padding-right: 5%;
+    }
+    .boton-der-index img{
+        width: 100px;
+        height: 100px;
+    }
+    .logotipo-index img{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (min-width:1886px ) and (max-width:2000px) {
+    .contenedor-index {
+        height: 84.2vh;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .titulo-index {
+        font-size: 5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .boton-der-index {
+        padding-right: 5%;
+    }
+    .boton-der-index img{
+        width: 150px;
+        height: 150px;
+    }
+    .logotipo-index img{
+        width: 200px;
+        height: 200px;
     }
 }
 /*--      quiensoy.html     --*/
