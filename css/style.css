@@ -234,7 +234,6 @@ footer {
     display: grid;
     grid-template-columns: 2.4fr 3fr 1fr;
     grid-template-rows: 1fr;
-    overflow-y:hidden;
 }
 .logotipo-index {
     display: flex;
@@ -1350,12 +1349,9 @@ footer {
 }
 /*--       contacto.html      --*/
 .contenedor-contacto {
-    height: 85.6vh;
+    height: 82.1vh;
 }
-textarea {
-    resize: none;
-} 
-.boton-iz-contacto {
+.boton-iz-contacto img{
     width: 100px;
     height: 100px;
 }
