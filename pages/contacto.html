@@ -34,45 +34,52 @@
                 <li>
                     <a href="./contacto.html">Contáctame!</a> 
                 </li>
+                <li>
+                    <a href="../pages/extrainfo.html">Extra info</a> 
+                </li>
             </ul>
         </nav>
     </header>
 <!--            main                -->
     <main class="container-fluid contenedor-contacto">
-        <section class="container-fluid d-flex justify-content-start">
-            <a href="./estudios.html">
-                <img class="boton-iz-contacto" src="../img/nextizquierda.png" alt="">
-            </a>
-        </section>
-        <section class="container bg-primary d-flex align-items-center justify-content-center position-absolute top-50 start-50 translate-middle">
+        <section class="contenedor-form container d-flex align-items-center justify-content-center position-absolute top-50 start-50 translate-middle">
             <div class="row align-items-center ">
-                <article class="col bg-warning">
+                <article class="col">
                     <img src="../img/catImage.png" alt="">
                 </article>
                 <form action="" class="col">
                     <fieldset>
-                        <div class="">
+                        <div class="titulo-contacto">
                             <h1>Dejame un mensaje! :)</h1>
                         </div>
-                        <label class="">
+                        <label class="nombres-de-formulario">
                             <p>Nombre</p>
                             <input type="text" placeholder="escribi acá tu nombre">
                         </label>
-                        <label class="">
+                        <label class="nombres-de-formulario">
                             <p>Tu gmail</p>
                             <input type="mail" placeholder="@gmail.com">
                         </label>
-                        <label class="d-flex flex-column">
+                        <label class="d-flex flex-column nombres-de-formulario">
                             <p>Dejame un comentario!</p>
-                            <textarea name="Comentario" id="" cols="50" rows="16"></textarea>
+                            <textarea name="Comentario" id="" cols="70" rows="12"></textarea>
                             <div class="d-flex flex-row p-2 botones">
-                                <input class="ms-1" type="submit" value="enviar"> 
-                                <input class="ms-4" type="reset" value="borrar lo escrito">
+                                <button class="button">
+                                    <span>enviar</span>
+                                </button>
+                                <button class="button">
+                                    <span>borrar lo escrito</span>
+                                </button>
                             </div>
                         </label>
                     </fieldset>
                 </form>
             </div>
+        </section>
+        <section class="container-fluid d-flex justify-content-start">
+            <a href="./estudios.html">
+                <img class="boton-iz-contacto fixed-bottom" src="../img/nextizquierda.png" alt="">
+            </a>
         </section>
     </main>
     <!--               footer        -->

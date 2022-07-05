@@ -75,10 +75,15 @@ header {
 /*--       responsive de header celular grande        --*/
 @media (min-width:480px ) and (max-width:741px ) {
     header {
+        height: 125px;
         font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
     .navbar{
-        width: 75%;
+        width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -90,7 +95,7 @@ header {
 /*--       responsive de header tablet        --*/
 @media (min-width:742px ) and (max-width:760px ) {
     header {
-        font-size: 20px;
+        font-size: 0.8rem;
     }
     .navbar{
         width: 80%;
@@ -105,7 +110,7 @@ header {
 /*--      responsive de header desktop normal   --*/
 @media (min-width:761px ) and (max-width: 1024px ) {
     header {
-        font-size: 20px;
+        font-size: 1rem;
     }
     .navbar{
         width: 80%;
@@ -123,7 +128,7 @@ header {
 /*--      responsive de header desktop grande   --*/
 @media (min-width:1025px ) and (max-width:1440px) {
     header {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
     .navbar{
         width: 80%;
@@ -1350,12 +1355,77 @@ footer {
 }
 /*--       contacto.html      --*/
 .contenedor-contacto {
-    height: 85.6vh;
+    height: 84.2vh;
+}
+.contenedor-form {
+    height: 720px;
+    background: #3b3b3b65;
+    border-radius: 15px;
+    box-shadow: 60px 30px 5px 0px rgba(0, 0, 0, 0.568);
+}
+.titulo-contacto {
+    text-shadow: 10px 10px 10px rgb(0, 0, 0);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: white;
+}
+.nombres-de-formulario p{
+    font-size: 2rem;
+    color: white;
+    font-family: 'Lemonada', cursive;
+}
+.nombres-de-formulario input{
+    border: 5px rgb(190, 186, 186) solid;
+    border-radius: 10px;
 }
 textarea {
     resize: none;
+    border: 5px rgb(190, 186, 186) solid;
+    border-radius: 10px;
 } 
 .boton-iz-contacto {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+    bottom: 120px;
+    left: 10px;
+}
+.button {
+    padding: 20px 30px;
+    font-size: 16px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #3b3b3b;
+    border-radius: 5px;
+    min-width: 200px;
+    color: #fff;
+    z-index: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 0,3s;
+}
+.button::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -50px;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #ffffff71, transparent);
+    transition: all 1s;
+    z-index: -1;
+    transform: translateX(-120px) skew(-20deg);
+}
+.button:hover::before {
+    transform: translateX(300px) skew(-20deg);
+}
+.button:hover {
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(133,66,79,1) 100%);
+}
+.contenedor-extra-info {
+    height: 84.2vh;
 }
