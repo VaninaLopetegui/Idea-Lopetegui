@@ -415,7 +415,7 @@ footer {
         height: 300vh;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 0.6fr 0.5fr 0.3fr 0.3fr 1fr 0.7fr 0.1fr;
+        grid-template-rows: 0.3fr 0.6fr 0.5fr 0.3fr 0.3fr 1fr 0.7fr 0.5fr;
     }
 
     .foto-mia {
@@ -537,9 +537,9 @@ footer {
 @media screen and (min-width:480px) {
     /*--      quiensoy.html     --*/
     .contenedor-quiensoy {
-        height: 260vh;
+        height: 275vh;
         display: grid;
-        grid-template-columns: 0.5fr 1fr 1fr;
+        grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 0.6fr 2fr 1fr 1fr 1fr 1fr;
         row-gap: 20px;
     }
@@ -665,11 +665,10 @@ footer {
         height: 100px;
     }
 }
-@media (min-width:742px) and (max-width: 830px) {
-
+@media screen and (min-width:742px) {
     /*--      quiensoy.html     --*/
     .contenedor-quiensoy {
-        height: 150vh;
+        height: 170vh;
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 0.5fr repeat(2, 0.5fr) 0.1fr;
@@ -692,6 +691,8 @@ footer {
     }
 
     .titulo-quiensoy {
+        height: 300px;
+        width: 320px;
         grid-column: 2/3;
         grid-row: 1/2;
         font-size: 15px;
@@ -795,6 +796,127 @@ footer {
         width: 100px;
         height: 100px;
     }
+}
+@media screen and (min-width:930px) {
+        .video-youtube-cancion iframe {
+            width: 410px;
+            height: 300px;
+            box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
+        }
+    
+        .texto-1-quiensoy {
+            height: 200px;
+            width: 300px;
+        }
+    
+        .texto-2-quiensoy {
+            height: 200px;
+            width: 300px;
+        }
+}
+@media screen and (min-width:1000px) {
+    .video-youtube-cancion iframe {
+        width: 450px;
+        height: 300px;
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
+    }
+
+    .titulo-quiensoy {
+        width: 350px;
+        height: 350px;
+    }
+
+    .titulo-quiensoy h1{
+        font-size: 1.6rem;
+    }
+
+    .texto-1-quiensoy {
+        height: 200px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .texto-2-quiensoy {
+        height: 200px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width:1300px) {
+.contenedor-quiensoy {
+    height: 80.6vh;
+    display: grid;
+    grid-template-columns:  1fr 0.5fr 0.5fr 0.2fr 1fr;
+    grid-template-rows: 1.8fr 1.7fr 1.5fr;
+}
+/*--      main quiensoy.html      --*/
+.foto-mia {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.foto-mia img {
+    width: 250px;
+    height: 260px;
+}
+.titulo-quiensoy {
+    width: 500px;
+    height: 250px;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.video-youtube-cancion {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+.video-youtube-cancion iframe {
+    height: 250px;
+    width: 340px;
+}
+.texto-1-quiensoy {
+    font-size: 0.6rem;
+    grid-column: 4/5;
+    grid-row: 2/3;
+    height: 150px;
+    width: 340px;
+}
+.texto-2-quiensoy {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    height: 150px;
+    width: 340px;
+}
+.video-youtube-anime {
+    grid-column: 2/3;
+    grid-row: 2/4;
+}
+.video-youtube-anime iframe {
+    height: 300px;
+    width: 340px;
+}
+
+.dibujos {
+    grid-column: 3/4;
+    grid-row: 2/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.dibujo-ww img {
+    height: 270px;
+    width: 320px;
+}
+/*--    botones entre paginas    --*/
+.boton-iz-quiensoy {
+    grid-column: 1/2;
+    grid-row: 1/5;
+}
+.boton-der-quiensoy {
+    grid-column: 5/6;
+    grid-row: 1/5;
+}
 }
 
 /*--      estudios.html      --*/
@@ -902,14 +1024,118 @@ footer {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-right: 5%;
+    padding-right: 5%;  
 }
 
 .boton-der-estudios img {
     width: 100px;
     height: 100px;
 }
-
+@media screen and (min-width:320px) {
+    /*--      estudios.html      --*/
+.contenedor-estudios {
+    height: 120vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.1fr 0.3fr 1fr;
+}
+.titulo-estudios{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.titulo-estudios h1{
+    font-size: 1.2rem;
+}
+.subtitulo-1 h2{
+    font-size: 1.3rem;
+}
+.subtitulo-2 h2{
+    font-size: 1.3rem;
+}
+.subtitulo-tabla-estudios {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.lista-tabla-estudios {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.lista-1 {
+    font-size: 0.6rem;
+}
+.lista-2 {
+    font-size: 0.6rem;
+    overflow:auto
+}
+.boton-iz-estudios {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+.boton-iz-estudios img {
+    width: 80px;
+    height: 80px;
+}
+.boton-der-estudios {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+.boton-der-estudios img {
+    width: 80px;
+    height: 80px;
+}
+}
+@media screen and (min-width:600px) {
+    .titulo-estudios h1{
+        font-size: 1.8rem;
+    }
+    .lista-1 {
+        font-size: 0.8rem;
+    }
+    .lista-2 {
+        font-size: 0.8rem;
+        overflow:auto
+    }
+}
+@media screen and (min-width:1200px) {
+    .contenedor-estudios {
+        height: 80.6vh;
+        display: grid;
+        grid-template-columns: 0.5fr 3fr 0.5fr;
+        grid-template-rows:  0.7fr 0.3fr;
+    }
+    .titulo-estudios{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .titulo-estudios h1{
+        font-size: 2.2rem;
+    }
+    .subtitulo-tabla-estudios {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .lista-tabla-estudios {
+        height: 360px;
+        grid-column: 2/3;
+        grid-row: 3/4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .boton-iz-estudios {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .boton-der-estudios {
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+}
 /*--       contacto.html      --*/
 .contenedor-contacto {
     height: 84.2vh;
