@@ -3,171 +3,50 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
-/*--         header general          --*/
-header {
-    background-color: rgba(92, 69, 114, 0.774);
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 2rem;
+
+/*--        header                   --*/
+.header {
+    padding: 0;
 }
+
+.color {
+    background-color: rgb(102, 62, 140);
+}
+
 /*--       gato header icono         --*/
-.imagen-gato-header img{
-    width: 80px;
-    padding-left: 15%;
+.imagen-gato-header img {
+    width: 95px;
     object-fit: contain;
     transition: all 0.4s;
 }
+
 .icon-gato:hover {
     transform: scale(1.1);
 }
+
 /*--         navbar           --*/
-.navbar{
-    padding: 10px;
-    width: 65%;
-    height: 100px;
+.navbar {
     background-color: rgba(86, 86, 180, 0.801);
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: space-evenly;
 }
-.navbar-ul {
-    display: flex;
-    justify-content: space-around;
-}
-.navbar-ul li{
-    display: inline-block;
-}
-.navbar-ul li a{
+
+.navbar-ul li a {
     font-family: 'Bungee', cursive;
     text-decoration: none;
     color: white;
 }
+
 .navbar-ul li a:hover {
     color: rgb(208, 230, 17);
     transition: all 1s;
 }
-/*--       responsive de header celular chico        --*/
-@media (min-width:320px ) and (max-width:479px ) {
-    header {
-        height: 125px;
-        font-size: 11px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .navbar{
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .navbar-ul li a {
-        padding: 3px;
-    }
-    .imagen-gato-header img{
-        width: 65px;
-    }
-}
-/*--       responsive de header celular grande        --*/
-@media (min-width:480px ) and (max-width:741px ) {
-    header {
-        font-size: 12px;
-    }
-    .navbar{
-        width: 75%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .navbar-ul li a {
-        padding: 6px;
-    }
-}
-/*--       responsive de header tablet        --*/
-@media (min-width:742px ) and (max-width:760px ) {
-    header {
-        font-size: 20px;
-    }
-    .navbar{
-        width: 80%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .navbar-ul li a {
-        padding: 12px;
-    }
-}
-/*--      responsive de header desktop normal   --*/
-@media (min-width:761px ) and (max-width: 1024px ) {
-    header {
-        font-size: 20px;
-    }
-    .navbar{
-        width: 80%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .navbar-ul li a {
-        padding: 10px;
-    }
-    .imagen-gato-header img{
-        width: 95px;
-    }
-}
-/*--      responsive de header desktop grande   --*/
-@media (min-width:1025px ) and (max-width:1440px) {
-    header {
-        font-size: 1.8rem;
-    }
-    .navbar{
-        width: 80%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .navbar-ul li a {
-        padding: 14px;
-    }
-}
-@media (min-width:1441px ) and (max-width:1900px) {
-    header {
-        font-size: 1.8rem;
-    }
-    .navbar{
-        width: 80%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .navbar-ul li a {
-        padding: 14px;
-    }
-}
-@media (min-width:1901px ) and (max-width:3000px) {
-    header {
-        font-size: 2.5rem;
-        height: 120px;
-    }
-    .navbar{
-        height: 120px;
-        width: 70%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .navbar-ul li a {
-        padding: 50px;
-    }
-    .imagen-gato-header img{
-        width: 120px;
-    }
-}
+
 /*--           footer general            --*/
 footer {
     background-color: black;
@@ -178,21 +57,25 @@ footer {
     justify-content: flex-end;
     align-items: center;
 }
-.footer-ul li{
+
+.footer-ul li {
     display: inline-block;
     padding: 0px 30px 0 50px;
 }
-.footer-ul li a{
+
+.footer-ul li a {
     text-decoration: none;
     color: white;
     font-family: 'Bungee', cursive;
 }
+
 .footer-ul li a:hover {
-    color:rgb(208, 230, 17);
+    color: rgb(208, 230, 17);
     transition: all 1s;
 }
+
 /*--       responsive de footer celular chico        --*/
-@media (min-width:320px ) and (max-width:479px ) {
+@media screen and (min-width:320px) {
     footer {
         font-size: 10px;
         height: 6.1vh;
@@ -201,49 +84,50 @@ footer {
         justify-content: space-evenly;
         align-items: center;
     }
-    .footer-ul li{
+
+    .footer-ul li {
         padding: 20px 0px 0px 10px;
     }
 }
+
 /*--       responsive de footer celular grande        --*/
-@media (min-width:480px ) and (max-width:741px ) {
+@media screen and (min-width:600px) {
     footer {
-        font-size: 11px;
-        height: 6.1vh;
+        font-size: 0.7rem;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 30px;
+    }
+
+    footer ul li a {
+        padding: 5px;
     }
 }
-/*--       responsive de footer desktop       --*/
-@media (min-width:761px ) and (max-width: 1024px ) {
+
+@media screen and (min-width:1204px) {
     footer {
-        font-size: 18px;
+        font-size: 0.8rem;
     }
 }
-@media (min-width:1441px ) and (max-width:1885px) {
-    footer {
-        font-size: 1rem;
-    }
-}
-@media (min-width:1886px ) and (max-width:1920px){
-    footer {
-        font-size: 1.5rem;
-    }
-}
+
 /*--          index.html        --*/
 .contenedor-index {
-    height: 84.2vh;
     display: grid;
     grid-template-columns: 2.4fr 3fr 1fr;
     grid-template-rows: 1fr;
 }
+
 .logotipo-index {
     display: flex;
     justify-content: end;
     align-items: center;
 }
+
 .logotipo-index img {
     width: 250px;
     height: 250px;
 }
+
 .titulo-index {
     font-size: 6rem;
     font-family: 'Press Start 2P', cursive;
@@ -252,223 +136,139 @@ footer {
     justify-content: flex-start;
     align-items: center;
 }
+
 .boton-der-index {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     padding-right: 5%;
 }
-.boton-der-index img{
+
+.boton-der-index img {
     width: 150px;
     height: 150px;
 }
+
 /*--       responsive de index.html celular chico        --*/
-@media (min-width:320px ) and (max-width:479px ) {
+@media screen and (min-width:320px) {
     .contenedor-index {
-        height: 80.3vh;
+        height: 81.6vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr 1fr;
     }
+
     .titulo-index {
-        font-size: 27px;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
+
+    .titulo-index h1 {
+        font-size: 2.5rem;
+    }
+
     .logotipo-index img {
         width: 120px;
         height: 120px;
     }
+
     .logotipo-index {
         display: flex;
         justify-content: center;
         align-items: flex-end;
     }
+
     .boton-der-index {
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
         padding-right: 2%;
     }
-    .boton-der-index img{
+
+    .boton-der-index img {
         width: 70px;
         height: 70px;
     }
 }
+
 /*--       responsive de index.html celular grande        --*/
-@media (min-width:480px ) and (max-width:741px ) {
-    .contenedor-index {
-        height: 83vh;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 0.5fr 1fr;
-    }
-    .titulo-index {
-        font-size: 2.5rem;
-        display: flex;
-        justify-content: center;
-    }
-    .logotipo-index {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    .logotipo-index img {
-        width: 150px;
-        height: 150px;
-    }
-    .boton-der-index {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        padding-right: 2%;
-    }
-    .boton-der-index img{
-        width: 85px;
-        height: 85px;
-    }
-}
-/*--       responsive de index.html tablet        --*/
-@media (min-width:742px ) and (max-width:760px ) {
-    .contenedor-index {
-        height: 81.8vh;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 0.5fr 1fr;
-    }
-    .titulo-index {
+@media screen and (min-width:600px) {
+    .titulo-index h1 {
         font-size: 3rem;
-        display: flex;
-        justify-content: center;
-    }
-    .logotipo-index {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    .logotipo-index img {
-        width: 150px;
-        height: 150px;
-    }
-    .boton-der-index {
-        padding-right: 2%;
-    }
-    .boton-der-index img{
-        width: 85px;
-        height: 85px;
     }
 }
+
 /*--       responsive de index.html desktop        --*/
-@media (min-width:761px ) and (max-width: 1024px ) {
+@media screen and (min-width:1140px) {
     .contenedor-index {
-        height: 81.8vh;
+        height: 79.7vh;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 0.5fr 1fr;
+        grid-template-columns: 2.4fr 3fr 1fr;
+        grid-template-rows: 1fr;
     }
+
     .titulo-index {
-        font-size: 3.5rem;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
     }
+
     .logotipo-index {
         display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    .logotipo-index img {
-        width: 150px;
-        height: 150px;
-    }
-    .boton-der-index {
-        padding-right: 2%;
-    }
-    .boton-der-index img{
-        width: 85px;
-        height: 85px;
-    }
-}
-/*--      responsive de header desktop grande   --*/
-@media (min-width:1025px ) and (max-width:1440px ) {
-    .contenedor-index {
-        height: 81.8vh;
-        display: grid;
-        grid-template-columns: 1.6fr 3fr 0.5fr;
-        grid-template-rows: 1fr;
-    }
-    .titulo-index {
-        font-size: 3.2rem;
-    }
-    .logotipo-index img {
-        width: 150px;
-        height: 150px;
-    }
-    .boton-der-index {
-        padding-right: 5%;
-    }
-    .boton-der-index img{
-        width: 85px;
-        height: 85px;
-    }
-}
-@media (min-width:1441px ) and (max-width:1885px) {
-    .contenedor-index {
-        height: 81.8vh;
-        display: grid;
-        grid-template-columns: 2fr 2fr 1fr;
-        grid-template-rows: 1fr;
-    }
-    .titulo-index {
-        font-size: 3rem;
-        display: flex;
-        justify-content: flex-start;
         align-items: center;
-    }
-    .boton-der-index {
-        padding-right: 5%;
-    }
-    .boton-der-index img{
-        width: 100px;
-        height: 100px;
-    }
-    .logotipo-index img{
-        width: 150px;
-        height: 150px;
+        justify-content: flex-end;
     }
 }
-@media (min-width:1886px ) and (max-width:2000px) {
+
+@media screen and (min-width:1204px) {
     .contenedor-index {
-        height: 84.2vh;
-        display: grid;
-        grid-template-columns: 2fr 2fr 1fr;
-        grid-template-rows: 1fr;
+        height: 80.6vh;
     }
-    .titulo-index {
+
+    .titulo-index h1 {
         font-size: 5rem;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
     }
-    .boton-der-index {
-        padding-right: 5%;
-    }
-    .boton-der-index img{
+
+    .logotipo-index img {
         width: 150px;
         height: 150px;
     }
-    .logotipo-index img{
+
+    .boton-der-index img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media screen and (min-width:1680px) {
+    .contenedor-index {
+        height: 84.1vh;
+    }
+
+    .titulo-index h1 {
+        font-size: 6rem;
+    }
+
+    .logotipo-index img {
         width: 200px;
         height: 200px;
     }
+
+    .boton-der-index img {
+        width: 120px;
+        height: 120px;
+    }
 }
+
 /*--      quiensoy.html     --*/
 .contenedor-quiensoy {
     height: 82.1vh;
     display: grid;
     grid-template-columns: 1fr 2fr 4fr 2.5fr 1fr;
-    grid-template-rows:    2fr repeat(3, 1.5fr);
+    grid-template-rows: 2fr repeat(3, 1.5fr);
     row-gap: 20px;
 }
+
 /*--      main quiensoy.html      --*/
 .foto-mia {
     grid-column: 2/3;
@@ -477,6 +277,7 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 .foto-mia img {
     width: 250px;
     height: 300px;
@@ -484,6 +285,7 @@ footer {
     border-radius: 100px;
     border-left: 3px groove rgba(127, 255, 212, 0.521);
 }
+
 .titulo-quiensoy {
     background-color: rgb(0, 0, 0);
     grid-column: 3/4;
@@ -497,58 +299,68 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 .video-youtube-cancion {
     grid-column: 4/5;
     grid-row: 1/3;
 }
-.video-youtube-cancion iframe{
+
+.video-youtube-cancion iframe {
     height: 350px;
     width: 400px;
     border-radius: 100px;
     border: 15px groove rgba(127, 255, 212, 0.521);
     background-color: black;
 }
+
 .video-youtube-anime {
     grid-column: 2/3;
     grid-row: 3/5;
 }
-.video-youtube-anime iframe{
+
+.video-youtube-anime iframe {
     height: 350px;
     width: 390px;
     border-radius: 100px;
     border: 15px groove rgba(127, 255, 212, 0.521);
     background-color: black;
 }
+
 .dibujos {
     grid-column: 3/4;
     grid-row: 3/5;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.dibujo-rengoku img{
+
+.dibujo-rengoku img {
     width: 270px;
     height: 285px;
     border-radius: 100px;
     border: 15px groove rgba(127, 255, 212, 0.521);
     background-color: black;
 }
-.dibujo-rengoku{
+
+.dibujo-rengoku {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .dibujo-ww {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.dibujo-ww img{
+
+.dibujo-ww img {
     height: 270px;
     width: 360px;
     border-radius: 100px;
     border: 15px groove rgba(127, 255, 212, 0.521);
     background-color: black;
 }
+
 .texto-1-quiensoy {
     font-size: 13px;
     font-family: 'Lemonada', cursive;
@@ -558,6 +370,7 @@ footer {
     background-color: black;
     text-align: center;
 }
+
 .texto-2-quiensoy {
     font-size: 13px;
     font-family: 'Lemonada', cursive;
@@ -567,6 +380,7 @@ footer {
     background-color: black;
     text-align: center;
 }
+
 /*--    botones entre paginas    --*/
 .boton-iz-quiensoy {
     grid-column: 1/2;
@@ -576,10 +390,12 @@ footer {
     align-items: flex-end;
     padding: 5%;
 }
+
 .boton-iz-quiensoy img {
     width: 100px;
     height: 100px;
 }
+
 .boton-der-quiensoy {
     grid-column: 5/6;
     grid-row: 1/5;
@@ -588,17 +404,20 @@ footer {
     align-items: flex-end;
     padding: 5%;
 }
-.boton-der-quiensoy img{
+
+.boton-der-quiensoy img {
     width: 100px;
     height: 100px;
 }
-@media (min-width:320px) and (max-width:450px) {
+
+@media screen and (min-width:320px) {
     .contenedor-quiensoy {
         height: 300vh;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 0.6fr 0.5fr 0.3fr 0.3fr 1fr 0.7fr 0.1fr;
+        grid-template-rows: 0.3fr 0.6fr 0.5fr 0.3fr 0.3fr 1fr 0.7fr 0.5fr;
     }
+
     .foto-mia {
         grid-row: 1/2;
         grid-column: 1/2;
@@ -607,6 +426,7 @@ footer {
         justify-content: center;
         align-items: center;
     }
+
     .foto-mia img {
         background-color: rgb(204, 202, 182);
         width: 150px;
@@ -615,17 +435,20 @@ footer {
         border: 15px groove rgba(127, 255, 212, 0.521);
         box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
     }
+
     .titulo-quiensoy {
         grid-row: 2/3;
         grid-column: 1/2;
-        font-size: 15px;
         border: 30px groove rgba(127, 255, 212, 0.521);
         box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
     }
+
     .titulo-quiensoy h1 {
+        font-size: 1.3rem;
         display: flex;
         align-items: center;
     }
+
     .video-youtube-cancion {
         grid-column: 1/2;
         grid-row: 4/5;
@@ -633,11 +456,13 @@ footer {
         justify-content: center;
         align-items: center;
     }
-    .video-youtube-cancion iframe{
+
+    .video-youtube-cancion iframe {
         height: 250px;
         width: 310px;
         box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
     }
+
     .video-youtube-anime {
         grid-row: 7/8;
         grid-column: 1/2;
@@ -645,11 +470,13 @@ footer {
         justify-content: center;
         align-items: center;
     }
-    .video-youtube-anime iframe{
+
+    .video-youtube-anime iframe {
         height: 350px;
         width: 320px;
         box-shadow: 30px 45px rgba(0, 0, 0, 0.336);
     }
+
     .dibujos {
         grid-row: 6/7;
         grid-column: 1/2;
@@ -657,597 +484,448 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .dibujo-rengoku img{
+
+    .dibujo-rengoku img {
         width: 270px;
         height: 285px;
         box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
     }
-    .dibujo-ww img{
+
+    .dibujo-ww img {
         width: 260px;
         height: 205px;
         border-radius: 100px;
         border: 10px groove rgba(127, 255, 212, 0.521);
         box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
     }
+
     .texto-1-quiensoy {
         font-size: 13px;
         grid-column: 1/2;
         grid-row: 3/4;
         box-shadow: 20px 20px rgba(0, 0, 0, 0.438);
     }
+
     .texto-2-quiensoy {
         font-size: 13px;
         grid-row: 5/6;
         grid-column: 1/2;
         box-shadow: 20px 20px rgba(0, 0, 0, 0.438);
     }
+
     /*--    botones entre paginas    --*/
     .boton-iz-quiensoy {
         grid-row: 8/9;
         grid-column: 1/2;
     }
+
     .boton-iz-quiensoy img {
         width: 80px;
         height: 80px;
     }
+
     .boton-der-quiensoy {
         grid-row: 8/9;
         grid-column: 1/2;
     }
-    .boton-der-quiensoy img{
+
+    .boton-der-quiensoy img {
         width: 80px;
         height: 80px;
     }
 }
-@media (min-width:451px) and (max-width:490px) {
-    .contenedor-quiensoy {
-        height: 210vh;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 1.5fr 0.2fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
-        background-color: rgba(0, 0, 0, 0.384);
-    }
-    .foto-mia {
-        grid-row: 1/2;
-        grid-column: 1/2;
-        object-fit: contain;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    .foto-mia img {
-        background-color: rgb(204, 202, 182);
-        width: 150px;
-        height: 150px;
-        border-radius: 100px;
-        border: 15px groove rgba(127, 255, 212, 0.521);
-        box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
-    }
-    .titulo-quiensoy {
-        grid-row: 2/3;
-        grid-column: 1/2;
-        font-size: 15px;
-        border: 30px groove rgba(127, 255, 212, 0.521);
-        box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
-    }
-    .titulo-quiensoy h1 {
-        display: flex;
-        align-items: center;
-    }
-    .video-youtube-cancion {
-        grid-column: 1/2;
-        grid-row: 4/5;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    .video-youtube-cancion iframe{
-        height: 250px;
-        width: 310px;
-        box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
-    }
-    .video-youtube-anime {
-        grid-row: 7/8;
-        grid-column: 1/2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .video-youtube-anime iframe{
-        height: 350px;
-        width: 320px;
-        box-shadow: 40px 50px rgba(0, 0, 0, 0.336);
-    }
-    .dibujos {
-        grid-row: 6/7;
-        grid-column: 1/2;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-    }
-    .dibujo-rengoku img{
-        object-fit: fill;
-        width: 200px;
-        height: 200px;
-        box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
-    }
-    .dibujo-ww img{
-        width: 260px;
-        height: 205px;
-        border-radius: 100px;
-        border: 10px groove rgba(127, 255, 212, 0.521);
-        box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
-    }
-    .texto-1-quiensoy {
-        font-size: 13px;
-        grid-column: 1/2;
-        grid-row: 3/4;
-        box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
-    }
-    .texto-2-quiensoy {
-        font-size: 13px;
-        grid-row: 5/6;
-        grid-column: 1/2;
-        box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
-    }
-    /*--    botones entre paginas    --*/
-    .boton-iz-quiensoy {
-        grid-row: 8/9;
-        grid-column: 1/2;
-    }
-    .boton-iz-quiensoy img {
-        width: 80px;
-        height: 80px;
-    }
-    .boton-der-quiensoy {
-        grid-row: 8/9;
-        grid-column: 1/2;
-    }
-    .boton-der-quiensoy img{
-        width: 80px;
-        height: 80px;
-    }
-}
-@media (min-width:491px) and (max-width:660px) {
-    /*--      quiensoy.html     --*/
-.contenedor-quiensoy {
-    height: 200vh;
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-rows:    1fr 0.7fr 1fr 0.4fr 1fr 1fr 0.1fr;
-    row-gap: 20px;
-}
-/*--      main quiensoy.html      --*/
-.foto-mia {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.foto-mia img {
-    width: 170px;
-    height: 200px;
-    object-fit: contain;
-    box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
-}
-.titulo-quiensoy {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    font-size: 0.9rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 20px 15px rgba(0, 0, 0, 0.336);
-} 
-.texto-1-quiensoy {
-    font-size: 0.7rem;
-    grid-column: 1/3;
-    grid-row: 2/3;
-    box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
-}
-.video-youtube-cancion {
-    grid-column: 1/3;
-    grid-row: 3/4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.video-youtube-cancion iframe{
-    height: 230px;
-    width: 400px;
-    box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
-}
-.texto-2-quiensoy {
-    font-size: 0.7rem;
-    grid-column: 1/3;
-    grid-row: 4/5;
-    box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
-}
-.dibujos {  
-    grid-column: 1/3;
-    grid-row: 5/6;
-}
-.dibujo-rengoku img{
-    width: 215px;
-    height: 240px;
-    box-shadow: 40px 30px rgba(0, 0, 0, 0.336);
-}
-.dibujo-rengoku{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.dibujo-ww {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.dibujo-ww img{
-    width: 270px;
-    height: 240px;
-    box-shadow: 40px 30px rgba(0, 0, 0, 0.336);
-}
-.video-youtube-anime {
-    grid-column: 1/3;
-    grid-row: 6/7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.video-youtube-anime iframe{
-    height: 230px;
-    width: 400px;
-    box-shadow: 40px 60px rgba(0, 0, 0, 0.336);
-}
-/*--    botones entre paginas    --*/
-.boton-iz-quiensoy {
-    grid-column: 1/3;
-    grid-row: 7/8;
-}
-.boton-iz-quiensoy img {
-    width: 90px;
-    height: 90px;
-}
-.boton-der-quiensoy {
-    grid-column: 1/3;
-    grid-row: 7/8;
-}
-.boton-der-quiensoy img{
-    width: 100px;
-    height: 100px;
-}
-}
-@media (min-width:661px) and (max-width:741px) {
+@media screen and (min-width:550px) {
 /*--      quiensoy.html     --*/
-.contenedor-quiensoy {
-    height: 200vh;
-    display: grid;
-    grid-template-columns: 2fr 4fr 2fr;
-    grid-template-rows:    1fr 0.6fr 2fr 1fr 1fr 1fr 1fr;
-    row-gap: 20px;
-}
-/*--      main quiensoy.html      --*/
-.foto-mia {
-    grid-column: 1/2;
-    grid-row: 1/3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.foto-mia img {
-    width: 150px;
-    height: 180px;
-    object-fit: contain;
-    box-shadow: 20px 10px rgba(0, 0, 0, 0.336);
-}
-.titulo-quiensoy {
-    grid-column: 2/3;
-    grid-row: 1/3;
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 40px 10px rgba(0, 0, 0, 0.336);
-} 
-.texto-1-quiensoy {
-    font-size: 0.7rem;
-    grid-column: 2/3;
-    grid-row: 3/4;
-    box-shadow: 40px 10px rgba(0, 0, 0, 0.336);
-}
-.video-youtube-cancion {
-    grid-column: 1/4;
-    grid-row: 4/5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.video-youtube-cancion iframe{
-    height: 230px;
-    width: 400px;
-    box-shadow: 40px 10px rgba(0, 0, 0, 0.336);
-}
-.texto-2-quiensoy {
-    font-size: 1rem;
-    grid-column: 2/3;
-    grid-row: 5/6;
-    box-shadow: 40px 10px rgba(0, 0, 0, 0.336);
-}
-.dibujos {  
-    grid-column: 1/4;
-    grid-row: 6/7;
-}
-.dibujo-rengoku img{
-    width: 225px;
-    height: 250px;
-    box-shadow: 40px 15px rgba(0, 0, 0, 0.336);
-}
-.dibujo-rengoku{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.dibujo-ww {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.dibujo-ww img{
-    width: 340px;
-    height: 250px;
-    box-shadow: 40px 15px rgba(0, 0, 0, 0.336);
-}
-.video-youtube-anime {
-    grid-column: 2/3;
-    grid-row: 7/8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.video-youtube-anime iframe{
-    height: 220px;
-    width: 300px;
-    box-shadow: 20px 5px rgba(0, 0, 0, 0.336);
-}
-/*--    botones entre paginas    --*/
-.boton-iz-quiensoy {
-    grid-column: 1/2;
-    grid-row: 7/8;
-}
-.boton-iz-quiensoy img {
-    width: 90px;
-    height: 90px;
-}
-.boton-der-quiensoy {
-    grid-column: 3/4;
-    grid-row: 7/8;
-}
-.boton-der-quiensoy img{
-    width: 100px;
-    height: 100px;
-}
-    /*--      quiensoy.html     --*/
     .contenedor-quiensoy {
-        height: 200vh;
+        height: 250vh;
         display: grid;
-        grid-template-columns: 2fr 4fr 2fr;
-        grid-template-rows:    1fr 0.6fr 2fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 0.5fr repeat(5, 0.5fr) 0.1fr;
         row-gap: 20px;
     }
+    
+/*--      main quiensoy.html      --*/
+    .foto-mia {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .foto-mia img {
+        width: 200px;
+        height: 200px;
+    }
+    .titulo-quiensoy {
+        height: 350px;
+        width: 320px;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        font-size: 15px;
+    }
+    .texto-1-quiensoy {
+        height: 350px;
+        width: 200px;
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .video-youtube-cancion {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .video-youtube-cancion iframe {
+        width: 400px;
+        height: 300px;
+    }
+    .texto-2-quiensoy {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        height: 350px;
+        width: 200px;
+    }
+    .dibujos {
+        grid-column: 1/3;
+        grid-row: 5/6;
+    }
+    .dibujo-rengoku img {
+        width: 240px;
+        height: 260px;
+    }
+    .dibujo-ww img {
+        width: 260px;
+        height: 200px;
+    }
+    .video-youtube-anime {
+        grid-column: 1/3;
+        grid-row: 6/7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .video-youtube-anime iframe {
+        width: 400px;
+        height: 300px;
+    }
+/*--    botones entre paginas    --*/
+    .boton-iz-quiensoy {
+        grid-column: 1/2;
+        grid-row: 7/8;
+    }
+    .boton-der-quiensoy {
+        grid-column: 2/3;
+        grid-row: 7/8;
+    }
+}
+@media screen and (min-width:742px) {
+    /*--      quiensoy.html     --*/
+    .contenedor-quiensoy {
+        height: 170vh;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 0.5fr repeat(2, 0.5fr) 0.1fr;
+        row-gap: 20px;
+    }
+
     /*--      main quiensoy.html      --*/
     .foto-mia {
         grid-column: 1/2;
-        grid-row: 1/3;
+        grid-row: 1/2;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .foto-mia img {
-        width: 150px;
-        height: 180px;
-        object-fit: contain;
-        box-shadow: 20px 10px rgba(0, 0, 0, 0.336);
+        width: 200px;
+        height: 200px;
     }
+
     .titulo-quiensoy {
+        height: 300px;
+        width: 320px;
         grid-column: 2/3;
-        grid-row: 1/3;
-        font-size: 1rem;
+        grid-row: 1/2;
+        font-size: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 40px 10px rgba(0, 0, 0, 0.336);
-    } 
-    .texto-1-quiensoy {
-        font-size: 0.7rem;
-        grid-column: 2/3;
-        grid-row: 3/4;
-        box-shadow: 40px 10px rgba(0, 0, 0, 0.336);
     }
+
     .video-youtube-cancion {
-        grid-column: 1/4;
-        grid-row: 4/5;
+        grid-column: 3/4;
+        grid-row: 1/2;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .video-youtube-cancion iframe{
-        height: 230px;
-        width: 400px;
-        box-shadow: 40px 10px rgba(0, 0, 0, 0.336);
+
+    .video-youtube-cancion iframe {
+        width: 230px;
+        height: 300px;
     }
+
+    .texto-1-quiensoy {
+        height: 350px;
+        width: 200px;
+        grid-column: 3/4;
+        grid-row: 2/3;
+        font-size: 10px;
+    }
+
     .texto-2-quiensoy {
-        font-size: 1rem;
-        grid-column: 2/3;
-        grid-row: 5/6;
-        box-shadow: 40px 10px rgba(0, 0, 0, 0.336);
+        grid-column: 3/4;
+        grid-row: 3/4;
+        height: 350px;
+        width: 200px;
     }
-    .dibujos {  
-        grid-column: 1/4;
-        grid-row: 6/7;
-    }
-    .dibujo-rengoku img{
-        width: 225px;
-        height: 250px;
-        box-shadow: 40px 15px rgba(0, 0, 0, 0.336);
-    }
-    .dibujo-rengoku{
+
+    .video-youtube-anime {
+        grid-column: 1/3;
+        grid-row: 2/3;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+    .video-youtube-anime iframe {
+        width: 400px;
+        height: 300px;
+    }
+
+    .dibujos {
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+
+    .dibujo-rengoku img {
+        width: 240px;
+        height: 260px;
+    }
+
+    .dibujo-rengoku {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .dibujo-ww {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .dibujo-ww img{
-        width: 340px;
-        height: 250px;
-        box-shadow: 40px 15px rgba(0, 0, 0, 0.336);
+
+    .dibujo-ww img {
+        width: 260px;
+        height: 200px;
     }
-    .video-youtube-anime {
-        grid-column: 2/3;
-        grid-row: 7/8;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .video-youtube-anime iframe{
-        height: 220px;
-        width: 300px;
-        box-shadow: 20px 5px rgba(0, 0, 0, 0.336);
-    }
+
     /*--    botones entre paginas    --*/
     .boton-iz-quiensoy {
         grid-column: 1/2;
-        grid-row: 7/8;
+        grid-row: 4/5;
     }
+
     .boton-iz-quiensoy img {
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
     }
+
     .boton-der-quiensoy {
         grid-column: 3/4;
-        grid-row: 7/8;
+        grid-row: 4/5;
     }
-    .boton-der-quiensoy img{
+
+    .boton-der-quiensoy img {
         width: 100px;
         height: 100px;
     }
 }
-@media (min-width:742px) and (max-width: 830px) {
-    /*--      quiensoy.html     --*/
-.contenedor-quiensoy {
-    height: 150vh;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 0.5fr repeat(2, 0.5fr) 0.1fr;
-    row-gap: 20px;
+
+@media screen and (min-width:930px) {
+    .video-youtube-cancion iframe {
+        width: 410px;
+        height: 300px;
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
+    }
+
+    .texto-1-quiensoy {
+        height: 300px;
+        width: 300px;
+    }
+    .texto-1-quiensoy p{
+        font-size: 0.9rem;
+    }
+
+    .texto-2-quiensoy {
+        height: 230px;
+        width: 300px;
+    }
+    .texto-2-quiensoy p{
+        font-size: 0.9rem;
+    }
 }
-/*--      main quiensoy.html      --*/
-.foto-mia {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+@media screen and (min-width:1000px) {
+    .video-youtube-cancion iframe {
+        width: 450px;
+        height: 300px;
+    }
+
+    .titulo-quiensoy {
+        width: 350px;
+        height: 350px;
+    }
+
+    .titulo-quiensoy h1 {
+        font-size: 1.6rem;
+    }
+
+    .texto-1-quiensoy {
+        height: 250px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .texto-2-quiensoy {
+        height: 200px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
-.foto-mia img {
-    width: 200px;
-    height: 200px;
-    box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
+@media screen and (min-width:1300px) {
+    .video-youtube-anime iframe {
+        width: 450px;
+        height: 300px;
+    }
+    .titulo-quiensoy {
+        width: 450px;
+        height: 360px;
+    }
+    .titulo-quiensoy h1{
+        font-size: 2.2rem;
+    }
+    .dibujo-rengoku img {
+        width: 260px;
+        height: 300px;
+    }
+    .dibujo-ww img {
+        width: 330px;
+        height: 260px;
+    }
 }
-.titulo-quiensoy {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
+
+@media screen and (min-width:1420px) {
+    .contenedor-quiensoy {
+        height: 81.6vh;
+        display: grid;
+        grid-template-columns: 1fr 0.5fr 0.5fr 0.2fr 1fr;
+        grid-template-rows: 1.8fr 1.7fr 1.5fr;
+    }
+
+    /*--      main quiensoy.html      --*/
+    .foto-mia {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .foto-mia img {
+        width: 250px;
+        height: 260px;
+    }
+
+    .titulo-quiensoy {
+        width: 500px;
+        height: 250px;
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    .video-youtube-cancion {
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+
+    .video-youtube-cancion iframe {
+        height: 250px;
+        width: 340px;
+    }
+
+    .texto-1-quiensoy {
+        font-size: 0.6rem;
+        grid-column: 4/5;
+        grid-row: 2/3;
+        height: 150px;
+        width: 340px;
+    }
+
+    .texto-2-quiensoy {
+        grid-column: 4/5;
+        grid-row: 3/4;
+        height: 150px;
+        width: 340px;
+    }
+
+    .video-youtube-anime {
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+
+    .video-youtube-anime iframe {
+        height: 300px;
+        width: 340px;
+    }
+
+    .dibujos {
+        grid-column: 3/4;
+        grid-row: 2/4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dibujo-ww img {
+        height: 270px;
+        width: 320px;
+    }
+
+    /*--    botones entre paginas    --*/
+    .boton-iz-quiensoy {
+        grid-column: 1/2;
+        grid-row: 1/5;
+    }
+    .boton-iz-quiensoy img{
+        width: 90px;
+        height: 90px;
+    }
+
+    .boton-der-quiensoy {
+        grid-column: 5/6;
+        grid-row: 1/5;
+    }
+    .boton-der-quiensoy img{
+        width: 90px;
+        height: 90px;
+    }
 }
-.video-youtube-cancion {
-    grid-column: 3/4;
-    grid-row: 1/2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.video-youtube-cancion iframe{
-    width: 230px;
-    height: 300px;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
-}
-.texto-1-quiensoy {
-    height: 350px;
-    width: 200px;
-    grid-column: 3/4;
-    grid-row: 2/3;
-    font-size: 10px;
-    box-shadow: 20px 20px rgba(0, 0, 0, 0.438);
-}
-.texto-2-quiensoy {
-    grid-column: 3/4;
-    grid-row: 3/4;
-    height: 350px;
-    width: 200px;
-    box-shadow: 20px 20px rgba(0, 0, 0, 0.295);
-}
-.video-youtube-anime {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.video-youtube-anime iframe{
-    width: 400px;
-    height: 300px;
-    box-shadow: 30px 60px rgba(0, 0, 0, 0.336);
-}
-.dibujos {
-    grid-column: 1/3;
-    grid-row: 3/4;
-}
-.dibujo-rengoku img{
-    width: 240px;
-    height: 260px;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
-}
-.dibujo-rengoku{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.dibujo-ww {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.dibujo-ww img{
-    width: 260px;
-    height: 200px;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
-}
-/*--    botones entre paginas    --*/
-.boton-iz-quiensoy {
-    grid-column: 1/2;
-    grid-row: 4/5;
-}
-.boton-iz-quiensoy img {
-    width: 100px;
-    height: 100px;
-}
-.boton-der-quiensoy {
-    grid-column: 3/4;
-    grid-row: 4/5;
-}
-.boton-der-quiensoy img{
-    width: 100px;
-    height: 100px;
-}
-}
+
+@media screen and (min-width:1600px) {
+    .contenedor-quiensoy {
+    height: 84vh;
+    }
+    .titulo-quiensoy {
+        width: 500px;
+        height: 350px;
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    .titulo-quiensoy h1{
+        font-size: 2.5rem;
+    }
+    }
+
 /*--      estudios.html      --*/
 .contenedor-estudios {
     height: 82.1vh;
@@ -1255,6 +933,7 @@ footer {
     grid-template-columns: 1fr 3.5fr 3.5fr 1fr;
     grid-template-rows: 1fr 1fr 4fr;
 }
+
 .titulo-estudios {
     grid-column: 2/4;
     grid-row: 1/2;
@@ -1265,6 +944,7 @@ footer {
     color: white;
     font-family: 'Press Start 2P', cursive;
 }
+
 .subtitulo-1 {
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     border: 10px groove rgba(127, 255, 212, 0.521);
@@ -1274,6 +954,7 @@ footer {
     padding: 5%;
     color: white;
 }
+
 .subtitulo-2 {
     border: 10px groove rgba(127, 255, 212, 0.521);
     display: flex;
@@ -1283,10 +964,12 @@ footer {
     color: white;
     background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
-.titulo-estudios h1{
+
+.titulo-estudios h1 {
     border: 20px groove rgba(127, 255, 212, 0.521);
     border-radius: 50px;
 }
+
 .subtitulo-tabla-estudios {
     background-color: rgb(21, 57, 68);
     grid-column: 2/4;
@@ -1295,13 +978,14 @@ footer {
     grid-template-columns: 1fr 1fr;
     font-family: 'Lemonada', cursive;
 }
+
 .lista-tabla-estudios {
-    background-color: #ff0055;
     grid-column: 2/4;
     grid-row: 3/4;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
 .lista-1 {
     background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
     border: 10px groove rgba(127, 255, 212, 0.521);
@@ -1311,6 +995,7 @@ footer {
     font-family: 'Lemonada', cursive;
     padding: 10%;
 }
+
 .lista-2 {
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     border: 10px groove rgba(127, 255, 212, 0.521);
@@ -1320,9 +1005,11 @@ footer {
     font-family: 'Lemonada', cursive;
     padding: 10%;
 }
+
 .lista-tabla-estudios ul li {
     list-style-type: '😺';
 }
+
 .boton-iz-estudios {
     grid-column: 1/2;
     grid-row: 1/4;
@@ -1331,27 +1018,255 @@ footer {
     align-items: flex-end;
     padding: 5%;
 }
+
 .boton-iz-estudios img {
     width: 100px;
     height: 100px;
 }
+
 .boton-der-estudios {
     grid-column: 4/5;
-    grid-row: 1/4;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     padding-right: 5%;
 }
-.boton-der-estudios img{
+
+.boton-der-estudios img {
     width: 100px;
     height: 100px;
 }
+
+@media screen and (min-width:320px) {
+/*--      estudios.html      --*/
+    .contenedor-estudios {
+        height: 120vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.1fr 0.3fr 1fr;
+    }
+
+    .titulo-estudios {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .titulo-estudios h1 {
+        font-size: 1.2rem;
+    }
+
+    .subtitulo-1 h2 {
+        font-size: 1.3rem;
+    }
+
+    .subtitulo-2 h2 {
+        font-size: 1.3rem;
+    }
+
+    .subtitulo-tabla-estudios {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lista-tabla-estudios {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lista-1 {
+        font-size: 0.6rem;
+    }
+
+    .lista-2 {
+        font-size: 0.6rem;
+        overflow: auto
+    }
+
+    .boton-iz-estudios {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .boton-iz-estudios img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .boton-der-estudios {
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+
+    .boton-der-estudios img {
+        width: 80px;
+        height: 80px;
+    }
+}
+@media screen and (min-width:600px) {
+    .titulo-estudios h1 {
+        font-size: 1.8rem;
+    }
+
+    .lista-1 {
+        font-size: 0.8rem;
+    }
+
+    .lista-2 {
+        font-size: 0.8rem;
+        overflow: auto
+    }
+}
+@media screen and (min-width:1200px) {
+    .contenedor-estudios {
+        height: 81.6vh;
+        display: grid;
+        grid-template-columns: 0.5fr 3fr 0.5fr;
+        grid-template-rows: 0.7fr 0.3fr;
+    }
+
+    .titulo-estudios {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .titulo-estudios h1 {
+        font-size: 2.2rem;
+    }
+
+    .subtitulo-tabla-estudios {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lista-tabla-estudios {
+        height: 360px;
+        grid-column: 2/3;
+        grid-row: 3/4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .boton-iz-estudios {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .boton-der-estudios {
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+}
+@media screen and (min-width:1600px) {
+    .contenedor-estudios {
+        height: 84vh;
+        display: grid;
+        grid-template-rows: 0.4fr 0.4fr;
+    }
+    .subtitulo-tabla-estudios h2{
+        font-size: 1.5rem;
+    }
+
+    .lista-tabla-estudios {
+        height: 400px;
+    }
+    .lista-tabla-estudios ul li{
+        font-size: 1rem;
+    }
+    .lista-tabla-estudios p{
+        font-size: 1rem;
+    }
+}
+
 /*--       contacto.html      --*/
 .contenedor-contacto {
     height: 84.2vh;
 }
-.boton-iz-contacto img{
-    width: 100px;
-    height: 100px;
+
+.contenedor-form {
+    height: 720px;
+    background: #3b3b3b65;
+    border-radius: 15px;
+    box-shadow: 60px 30px 5px 0px rgba(0, 0, 0, 0.568);
+}
+
+.titulo-contacto {
+    text-shadow: 10px 10px 10px rgb(0, 0, 0);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: white;
+}
+
+.nombres-de-formulario p {
+    font-size: 2rem;
+    color: white;
+    font-family: 'Lemonada', cursive;
+}
+
+.nombres-de-formulario input {
+    border: 5px rgb(190, 186, 186) solid;
+    border-radius: 10px;
+}
+
+textarea {
+    resize: none;
+    border: 5px rgb(190, 186, 186) solid;
+    border-radius: 10px;
+}
+
+.boton-iz-contacto {
+    width: 120px;
+    height: 120px;
+    bottom: 120px;
+    left: 10px;
+}
+
+.button {
+    padding: 20px 30px;
+    font-size: 16px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #3b3b3b;
+    border-radius: 5px;
+    min-width: 200px;
+    color: #fff;
+    z-index: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 0, 3s;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -50px;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #ffffff71, transparent);
+    transition: all 1s;
+    z-index: -1;
+    transform: translateX(-120px) skew(-20deg);
+}
+
+.button:hover::before {
+    transform: translateX(300px) skew(-20deg);
+}
+
+.button:hover {
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(133, 66, 79, 1) 100%);
+}
+
+.contenedor-extra-info {
+    height: 84.2vh;
 }
