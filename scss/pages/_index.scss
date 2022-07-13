@@ -1,0 +1,131 @@
+/*--          index.html        --*/
+.contenedor-index {
+    display: grid;
+    grid-template-columns: 2.4fr 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.logotipo-index {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.titulo-index {
+    font-size: 6rem;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media screen and (min-width:320px) {
+    .contenedor-index {
+        height: 81.6vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr;
+    }
+    .titulo-index {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+    .logotipo-index {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        img {
+            width: 120px;
+            height: 120px;
+        }
+    }
+    .boton-der-index {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-right: 2%;
+        img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+}
+
+@media screen and (min-width:600px) {
+    .titulo-index {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media screen and (min-width:1140px) {
+    .contenedor-index {
+        height: 79.7vh;
+        display: grid;
+        grid-template-columns: 2.4fr 3fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .titulo-index {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .logotipo-index {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width:1204px) {
+    .contenedor-index {
+        height: 80.6vh;
+        h1 {
+            font-size: 5rem;
+        }
+    }
+    .logotipo-index {
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .boton-der-index {
+        img {
+            width: 90px;
+            height: 90px;
+        }
+    }
+}
+
+@media screen and (min-width:1680px) {
+    .contenedor-index {
+        height: 84.1vh;
+        h1 {
+            font-size: 6rem;
+        }
+    }
+    .logotipo-index {
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    .boton-der-index {
+        img {
+            width: 120px;
+            height: 120px;
+        }
+    }
+}

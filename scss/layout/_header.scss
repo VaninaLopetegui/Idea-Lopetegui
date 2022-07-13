@@ -1,0 +1,43 @@
+/*--        header                   --*/
+
+.header {
+    padding: 0;
+}
+
+.color {
+    background-color: rgb(102, 62, 140);
+}
+
+/*--       gato header icono         --*/
+
+.imagen-gato-header {
+    img {
+        width: 95px;
+        object-fit: contain;
+        transition: all 0.4s;
+    }
+}
+.icon-gato:hover {
+    transform: scale(1.1);
+}
+
+/*--         navbar           --*/
+
+.navbar {
+    background-color: rgba(86, 86, 180, 0.801);
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: space-evenly;
+    li {
+        a {
+            font-family: 'Bungee', cursive;
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+.navbar-ul li a:hover {
+    color: rgb(208, 230, 17);
+    transition: all 1s;
+}

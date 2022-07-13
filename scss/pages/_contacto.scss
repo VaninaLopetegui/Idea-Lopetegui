@@ -1,0 +1,135 @@
+/*--       contacto.html      --*/
+.contenedor-contacto {
+    height: 83.9vh;
+}
+
+.contenedor-form {
+    background: #3b3b3b65;
+    border-radius: 15px;
+    box-shadow: 60px 30px 5px 0px rgba(0, 0, 0, 0.568);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-contacto {
+    text-shadow: 10px 10px 10px rgb(0, 0, 0);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: white;
+}
+
+.nombres-de-formulario {
+    p {
+        font-size: 2rem;
+        color: white;
+        font-family: 'Lemonada', cursive;
+    }
+}
+
+.nombres-de-formulario {
+    input {
+        border: 5px rgb(190, 186, 186) solid;
+        border-radius: 10px;
+    }
+}
+
+textarea {
+    resize: none;
+    border: 5px rgb(190, 186, 186) solid;
+    border-radius: 10px;
+}
+
+
+@media screen and (min-width:320px) {
+    .contenedor-contacto {
+        height: 160vh;
+    }
+    .imagen-form {
+        img {
+            width: 270px;
+            height: 300px;
+        }
+
+    }
+    .titulo-contacto {
+        h1 {
+            font-size: 1.4rem;
+        }
+    }
+    .nombres-de-formulario {
+        p {
+            font-size: 1rem;
+        }
+    }
+    .botones {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .boton-iz-contacto {
+        width: 90px;
+        height: 90px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+@media screen and (min-width:460px) {
+    .contenedor-contacto {
+        height: 145vh;
+    }
+    .imagen-form img{
+        width: 300px;
+        height: 310px;
+    }
+}
+@media screen and (min-width:536px) {
+    .contenedor-contacto {
+        height: 135vh;
+    }
+}
+@media screen and (min-width:768px) {
+    .imagen-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width:992px) {
+    .contenedor-contacto {
+        height: 100vh;
+    }
+    .imagen-form {
+        img {
+            width: 350px;
+            height: 400px;
+        }
+    }
+}
+@media screen and (min-width:1200px) {
+    .contenedor-contacto {
+        height: 83.9vh;
+    }
+    .titulo-contacto {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    .boton-iz-contacto {
+        img {
+            width: 120px;
+            height: 120px;
+        }
+    }
+    .nombres-de-formulario {
+        p {
+        font-size: 2rem;
+        }
+    }
+    .imagen-form {
+        img {
+            width: 400px;
+            height: 450px;
+        }
+    }
+}
