@@ -115,6 +115,32 @@
     text-align: center;
 }
 
+//          botones de quiensoy.html          //
+.boton-iz-quiensoy {
+    grid-column: 1/2;
+    grid-row: 1/5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 5%;
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+.boton-der-quiensoy {
+    grid-column: 5/6;
+    grid-row: 1/5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 5%;
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 @media screen and (min-width:320px) {
     .contenedor-quiensoy {
         height: 300vh;
@@ -328,7 +354,6 @@
         grid-template-rows: 0.5fr repeat(2, 0.5fr) 0.1fr;
         row-gap: 20px;
     }
-
     /*--      main quiensoy.html      --*/
     .foto-mia {
         grid-column: 1/2;
@@ -612,4 +637,4 @@
             font-size: 2.5rem;
         }
     }
-    }
+}

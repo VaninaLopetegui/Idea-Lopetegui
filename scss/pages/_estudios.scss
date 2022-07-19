@@ -84,6 +84,30 @@
         }
     }
 }
+//          botones de estudios.html          //
+.boton-iz-estudios {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 5%;
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+.boton-der-estudios {
+    grid-column: 4/5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 5%;
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
 
 @media screen and (min-width:320px) {
 /*--      estudios.html      --*/

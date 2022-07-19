@@ -39,7 +39,14 @@ textarea {
     border: 5px rgb(190, 186, 186) solid;
     border-radius: 10px;
 }
-
+//          botones de contacto.html          //
+.boton-iz-contacto {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 @media screen and (min-width:320px) {
     .contenedor-contacto {

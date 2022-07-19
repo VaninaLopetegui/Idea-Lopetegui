@@ -1,5 +1,9 @@
 @import "./base/reset";
 
+@import "./components/buttons";
+
+@import "./components/carousel";
+
 @import "./layout/header";
 
 @import "./layout/footer";
@@ -13,7 +17,3 @@
 @import "./pages/contacto";
 
 @import "./pages/extrainfo";
-
-@import "./components/buttons";
-
-@import "./components/carousel";
