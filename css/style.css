@@ -9,6 +9,10 @@ body {
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
+.color-titulos, .nombres-de-formulario p, .titulo-contacto, .subtitulo-2, .subtitulo-1, .titulo-estudios, .texto-2-quiensoy, .texto-1-quiensoy, .titulo-quiensoy, .titulo-index {
+  color: white;
+}
+
 .button {
   padding: 20px 30px;
   font-size: 16px;
@@ -71,11 +75,12 @@ body {
 .navbar {
   background-color: rgba(86, 86, 180, 0.801);
   font-size: 1.5rem;
-  align-items: center;
+  display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 .navbar li a {
-  font-family: "Bungee", cursive;
+  font-family: "Bungee";
   text-decoration: none;
   color: white;
 }
@@ -91,19 +96,19 @@ footer {
   height: 7.3vh;
   font-size: 1.5rem;
   display: flex;
-  flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
+  flex-flow: row nowrap;
 }
 
 .footer-ul li {
   display: inline-block;
-  padding: 0px 30px 0 50px;
+  padding: 10px 10px;
 }
 .footer-ul li a {
   text-decoration: none;
   color: white;
-  font-family: "Bungee", cursive;
+  font-family: "Bungee";
 }
 .footer-ul li a:hover {
   color: rgb(208, 230, 17);
@@ -115,12 +120,9 @@ footer {
     font-size: 10px;
     height: 6.1vh;
     display: flex;
-    flex-flow: row;
     justify-content: space-evenly;
     align-items: center;
-  }
-  footer li {
-    padding: 20px 0px 0px 10px;
+    flex-flow: row;
   }
 }
 @media screen and (min-width: 600px) {
@@ -158,8 +160,7 @@ footer {
 
 .titulo-index {
   font-size: 6rem;
-  font-family: "Press Start 2P", cursive;
-  color: white;
+  font-family: "Press Start 2P";
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -211,10 +212,14 @@ footer {
   .titulo-index h1 {
     font-size: 3rem;
   }
+  .boton-der-index img {
+    width: 90px;
+    height: 90px;
+  }
 }
 @media screen and (min-width: 1140px) {
   .contenedor-index {
-    height: 79.7vh;
+    height: 81.6vh;
     display: grid;
     grid-template-columns: 2.4fr 3fr 1fr;
     grid-template-rows: 1fr;
@@ -225,13 +230,13 @@ footer {
   }
   .logotipo-index {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1204px) {
   .contenedor-index {
-    height: 80.6vh;
+    height: 81.6vh;
   }
   .contenedor-index h1 {
     font-size: 5rem;
@@ -240,14 +245,10 @@ footer {
     width: 150px;
     height: 150px;
   }
-  .boton-der-index img {
-    width: 90px;
-    height: 90px;
-  }
 }
 @media screen and (min-width: 1680px) {
   .contenedor-index {
-    height: 84.1vh;
+    height: 83.9vh;
   }
   .contenedor-index h1 {
     font-size: 6rem;
@@ -255,10 +256,6 @@ footer {
   .logotipo-index img {
     width: 200px;
     height: 200px;
-  }
-  .boton-der-index img {
-    width: 120px;
-    height: 120px;
   }
 }
 /*--      quiensoy.html     --*/
@@ -291,8 +288,7 @@ footer {
   grid-column: 3/4;
   grid-row: 1/3;
   font-size: 2.5rem;
-  font-family: "Press Start 2P", cursive;
-  color: white;
+  font-family: "Press Start 2P";
   border: 30px groove rgba(127, 255, 212, 0.521);
   border-radius: 800px;
   display: flex;
@@ -360,8 +356,7 @@ footer {
 
 .texto-1-quiensoy {
   font-size: 13px;
-  font-family: "Lemonada", cursive;
-  color: white;
+  font-family: "Lemonada";
   border-radius: 10px;
   border: 10px groove rgba(127, 255, 212, 0.521);
   background-color: black;
@@ -370,8 +365,7 @@ footer {
 
 .texto-2-quiensoy {
   font-size: 13px;
-  font-family: "Lemonada", cursive;
-  color: white;
+  font-family: "Lemonada";
   border-radius: 10px;
   border: 10px groove rgba(127, 255, 212, 0.521);
   background-color: black;
@@ -875,8 +869,7 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  color: white;
-  font-family: "Press Start 2P", cursive;
+  font-family: "Press Start 2P";
 }
 
 .subtitulo-1 {
@@ -886,7 +879,6 @@ footer {
   justify-content: flex-start;
   align-items: center;
   padding: 5%;
-  color: white;
 }
 
 .subtitulo-2 {
@@ -895,7 +887,6 @@ footer {
   justify-content: flex-end;
   align-items: center;
   padding: 5%;
-  color: white;
   background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
 
@@ -910,7 +901,7 @@ footer {
   grid-row: 2/3;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  font-family: "Lemonada", cursive;
+  font-family: "Lemonada";
 }
 
 .lista-tabla-estudios {
@@ -926,8 +917,11 @@ footer {
   display: flex;
   justify-content: flex-start;
   font-size: 1rem;
-  font-family: "Lemonada", cursive;
+  font-family: "Lemonada";
   padding: 10%;
+}
+.lista-1 ul li {
+  list-style-type: "😺";
 }
 
 .lista-2 {
@@ -936,7 +930,7 @@ footer {
   display: flex;
   justify-content: flex-start;
   font-size: 1rem;
-  font-family: "Lemonada", cursive;
+  font-family: "Lemonada";
   padding: 10%;
 }
 .lista-2 ul li {
@@ -1108,15 +1102,13 @@ footer {
 
 .titulo-contacto {
   text-shadow: 10px 10px 10px rgb(0, 0, 0);
-  font-family: "Press Start 2P", cursive;
+  font-family: "Press Start 2P";
   font-size: 2rem;
-  color: white;
 }
 
 .nombres-de-formulario p {
   font-size: 2rem;
-  color: white;
-  font-family: "Lemonada", cursive;
+  font-family: "Lemonada";
 }
 
 .nombres-de-formulario input {

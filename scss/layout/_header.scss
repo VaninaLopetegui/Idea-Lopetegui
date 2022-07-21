@@ -26,11 +26,10 @@
 .navbar {
     background-color: rgba(86, 86, 180, 0.801);
     font-size: 1.5rem;
-    align-items: center;
-    justify-content: space-evenly;
+    @include D-Flex (space-evenly , center);
     li {
         a {
-            font-family: 'Bungee', cursive;
+            font-family: map-get($font-family, "Header-Footer");
             text-decoration: none;
             color: white;
         }

@@ -7,23 +7,21 @@
     background: #3b3b3b65;
     border-radius: 15px;
     box-shadow: 60px 30px 5px 0px rgba(0, 0, 0, 0.568);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include D-Flex (center , center);
 }
 
 .titulo-contacto {
     text-shadow: 10px 10px 10px rgb(0, 0, 0);
-    font-family: 'Press Start 2P', cursive;
+    font-family: map-get($font-family, "Titulos");
     font-size: 2rem;
-    color: white;
+    @extend .color-titulos;
 }
 
 .nombres-de-formulario {
     p {
         font-size: 2rem;
-        color: white;
-        font-family: 'Lemonada', cursive;
+        @extend .color-titulos;
+        font-family: map-get($font-family, "Textos");
     }
 }
 
@@ -43,9 +41,7 @@ textarea {
 .boton-iz-contacto {
     width: 120px;
     height: 120px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include D-Flex (flex-start , center);
 }
 
 @media screen and (min-width:320px) {
@@ -76,9 +72,7 @@ textarea {
     .boton-iz-contacto {
         width: 90px;
         height: 90px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        @include D-Flex (flex-start , center);
     }
 }
 @media screen and (min-width:460px) {
@@ -97,9 +91,7 @@ textarea {
 }
 @media screen and (min-width:768px) {
     .imagen-form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include D-Flex (center , center);
     }
 }
 @media screen and (min-width:992px) {

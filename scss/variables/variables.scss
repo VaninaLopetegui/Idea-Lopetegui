@@ -1,0 +1,16 @@
+//        mixin para display flex          //
+@mixin D-Flex ($justify , $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+//         map para font-family           //
+$font-family: (
+    Titulos: "Press Start 2P",
+    Header-Footer: "Bungee", 
+    Textos: "Lemonada",
+);
+//       extend para titulos color white    //
+.color-titulos{
+    color: white;
+}

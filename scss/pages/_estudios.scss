@@ -9,31 +9,25 @@
 .titulo-estudios {
     grid-column: 2/4;
     grid-row: 1/2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include D-Flex (center , center);
     font-size: 2rem;
-    color: white;
-    font-family: 'Press Start 2P', cursive;
+    @extend .color-titulos;
+    font-family: map-get($font-family, "Titulos");
 }
 
 .subtitulo-1 {
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     border: 10px groove rgba(127, 255, 212, 0.521);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include D-Flex (flex-start , center);
     padding: 5%;
-    color: white;
+    @extend .color-titulos;
 }
 
 .subtitulo-2 {
     border: 10px groove rgba(127, 255, 212, 0.521);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    @include D-Flex (flex-end , center);
     padding: 5%;
-    color: white;
+    @extend .color-titulos;
     background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
 
@@ -50,7 +44,7 @@
     grid-row: 2/3;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-family: 'Lemonada', cursive;
+    font-family: map-get($font-family, "Textos");
 }
 
 .lista-tabla-estudios {
@@ -66,8 +60,13 @@
     display: flex;
     justify-content: flex-start;
     font-size: 1rem;
-    font-family: 'Lemonada', cursive;
+    font-family: map-get($font-family, "Textos");
     padding: 10%;
+    ul {
+        li {
+            list-style-type: '😺';
+        }
+    }
 }
 
 .lista-2 {
@@ -76,7 +75,7 @@
     display: flex;
     justify-content: flex-start;
     font-size: 1rem;
-    font-family: 'Lemonada', cursive;
+    font-family: map-get($font-family, "Textos");
     padding: 10%;
     ul {
         li {
@@ -88,9 +87,7 @@
 .boton-iz-estudios {
     grid-column: 1/2;
     grid-row: 1/4;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    @include D-Flex (flex-start , flex-end);
     padding: 5%;
     img {
         width: 100px;
@@ -99,9 +96,7 @@
 }
 .boton-der-estudios {
     grid-column: 4/5;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    @include D-Flex (flex-end , flex-end);
     padding-right: 5%;
     img {
         width: 100px;

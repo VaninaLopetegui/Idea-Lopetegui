@@ -6,9 +6,7 @@
 }
 
 .logotipo-index {
-    display: flex;
-    justify-content: end;
-    align-items: center;
+    @include D-Flex (end , center);
     img {
         width: 250px;
         height: 250px;
@@ -17,17 +15,13 @@
 
 .titulo-index {
     font-size: 6rem;
-    font-family: 'Press Start 2P', cursive;
-    color: white;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    font-family: map-get($font-family, "Titulos");
+    @extend .color-titulos;
+    @include D-Flex (flex-start , center);
 }
 //          botones de index.html          //
 .boton-der-index {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    @include D-Flex (flex-end , flex-end);
     padding-right: 5%;
 }
 
@@ -39,26 +33,20 @@
         grid-template-rows: 1fr 0.5fr 1fr;
     }
     .titulo-index {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include D-Flex (center , center);
         h1 {
             font-size: 2.5rem;
         }
     }
     .logotipo-index {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
+        @include D-Flex (center , flex-end);
         img {
             width: 120px;
             height: 120px;
         }
     }
     .boton-der-index {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
+        @include D-Flex (flex-end , flex-end);
         padding-right: 2%;
         img {
             width: 70px;
@@ -73,11 +61,17 @@
             font-size: 3rem;
         }
     }
+    .boton-der-index {
+        img {
+            width: 90px;
+            height: 90px;
+        }
+    }
 }
 
 @media screen and (min-width:1140px) {
     .contenedor-index {
-        height: 79.7vh;
+        height: 81.6vh;
         display: grid;
         grid-template-columns: 2.4fr 3fr 1fr;
         grid-template-rows: 1fr;
@@ -87,15 +81,13 @@
         justify-content: flex-start;
     }
     .logotipo-index {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        @include D-Flex (flex-end , center);
     }
 }
 
 @media screen and (min-width:1204px) {
     .contenedor-index {
-        height: 80.6vh;
+        height: 81.6vh;
         h1 {
             font-size: 5rem;
         }
@@ -106,18 +98,11 @@
             height: 150px;
         }
     }
-
-    .boton-der-index {
-        img {
-            width: 90px;
-            height: 90px;
-        }
-    }
 }
 
 @media screen and (min-width:1680px) {
     .contenedor-index {
-        height: 84.1vh;
+        height: 83.9vh;
         h1 {
             font-size: 6rem;
         }
@@ -126,13 +111,6 @@
         img {
             width: 200px;
             height: 200px;
-        }
-    }
-
-    .boton-der-index {
-        img {
-            width: 120px;
-            height: 120px;
         }
     }
 }
