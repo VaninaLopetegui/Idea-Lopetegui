@@ -1,602 +1,133 @@
 /*--      quiensoy.html     --*/
 .contenedor-quiensoy {
-    height: 82.1vh;
     display: grid;
-    grid-template-columns: 1fr 2fr 4fr 2.5fr 1fr;
-    grid-template-rows: 2fr repeat(3, 1.5fr);
-    row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+                        "titulo"
+                        "foto"
+                        "presentacion"
+                        "musica"
+                        "presentacion2"
+                        "botones";
+    height: 255vh;
+    background-color:  rgba(74, 39, 156, 0.445) ;
 }
-
-/*--      main quiensoy.html      --*/
-.foto-mia {
-    grid-column: 2/3;
-    grid-row: 1/3;
-    @include D-Flex (center , center);
-    img {
-        width: 250px;
-        height: 300px;
-        object-fit: contain;
-        border-radius: 100px;
-        border-left: 3px groove rgba(127, 255, 212, 0.521);
-    }
-}
-
 .titulo-quiensoy {
-    background-color: rgb(0, 0, 0);
-    grid-column: 3/4;
-    grid-row: 1/3;
-    font-size: 2.5rem;
+    grid-area: "titulo";
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-shadow: 10px 10px 10px rgb(0, 0, 0);
+    @include D-Flex (center , center);
+    h1 {
+        font-size: 1.8rem;
+    }
     font-family: map-get($font-family, "Titulos");
     @extend .color-titulos;
-    border: 30px groove rgba(127, 255, 212, 0.521);
-    border-radius: 800px;
+}
+.foto-mia {
+    grid-area: "foto";
     @include D-Flex (center , center);
-}
-
-.video-youtube-cancion {
-    grid-column: 4/5;
-    grid-row: 1/3;
-    iframe {
-        height: 350px;
-        width: 400px;
-        border-radius: 100px;
-        border: 15px groove rgba(127, 255, 212, 0.521);
-        background-color: black;
-    }
-}
-
-.video-youtube-anime {
-    grid-column: 2/3;
-    grid-row: 3/5;
-    iframe {
-        height: 350px;
-        width: 390px;
-        border-radius: 100px;
-        border: 15px groove rgba(127, 255, 212, 0.521);
-        background-color: black;
-    }
-}
-
-.dibujos {
-    grid-column: 3/4;
-    grid-row: 3/5;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.dibujo-rengoku img {
-    width: 270px;
-    height: 285px;
-    border-radius: 100px;
-    border: 15px groove rgba(127, 255, 212, 0.521);
-    background-color: black;
-}
-
-.dibujo-rengoku {
-    @include D-Flex (center , center);
-}
-
-.dibujo-ww {
-    @include D-Flex (center , center);
+    padding-bottom: 5%;
     img {
-        height: 270px;
-        width: 360px;
-        border-radius: 100px;
-        border: 15px groove rgba(127, 255, 212, 0.521);
-        background-color: black;
+        width: 300px;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 2%;
+        border: 10px solid rgba(0, 0, 0, 0.438);
+        box-shadow: 10px 0px 0px 20px rgba(0, 0, 0, 0.336);
     }
 }
-
 .texto-1-quiensoy {
-    font-size: 13px;
-    font-family: map-get($font-family, "Textos");
-    @extend .color-titulos;
+    grid-area: "presentacion";
+    span {
+        font-family: map-get($font-family, "Titulos");
+        font-size: 2.2rem;
+        color: rgb(208, 230, 17);
+    }
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.712);
     border-radius: 10px;
-    border: 10px groove rgba(127, 255, 212, 0.521);
-    background-color: black;
+    font-family: map-get($font-family, "Textos");
+    color: white;
+    font-size: 1rem;
     text-align: center;
+    border-radius: 2%;
+    border: 10px solid rgba(0, 0, 0, 0.438);
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
 }
-
+.video-youtube-cancion {
+    grid-area: "musica";
+    @extend .texto-1-quiensoy;
+    h2{
+        font-size: 1rem;
+    }
+    iframe {
+        box-shadow: 10px 0px 0px 20px rgba(0, 0, 0, 0.336);
+        object-fit: cover;
+        height: 250px;
+        width: 310px;
+    }
+}
 .texto-2-quiensoy {
-    font-size: 13px;
+    grid-area: "presentacion2";
+    @extend .texto-1-quiensoy;
+    span {
+        font-family: map-get($font-family, "Textos");
+        font-size: 1rem;
+    }
     font-family: map-get($font-family, "Textos");
     @extend .color-titulos;
-    border-radius: 10px;
-    border: 10px groove rgba(127, 255, 212, 0.521);
-    background-color: black;
     text-align: center;
 }
-
+.dibujo-ww {
+    height: 350px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 5%;
+    border-radius: 2%;
+    box-shadow: 10px 0px 0px 20px rgba(0, 0, 0, 0.336);
+}
+.dibujo-rengoku {
+    @extend .dibujo-ww;
+}
 //          botones de quiensoy.html          //
+.botones-next-quiensoy {
+    grid-area: "botones";
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
 .boton-iz-quiensoy {
-    grid-column: 1/2;
-    grid-row: 1/5;
-    @include D-Flex (flex-start , flex-end);
-    padding: 5%;
     img {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
     }
 }
 .boton-der-quiensoy {
-    grid-column: 5/6;
-    grid-row: 1/5;
-    @include D-Flex (flex-end , flex-end);
-    padding: 5%;
     img {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
     }
 }
-
-@media screen and (min-width:320px) {
+@media screen and (min-width:620px) {
     .contenedor-quiensoy {
-        height: 300vh;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 0.6fr 0.5fr 0.3fr 0.3fr 1fr 0.7fr 0.5fr;
-    }
-    .foto-mia {
-        grid-row: 1/2;
-        grid-column: 1/2;
-        object-fit: contain;
-        @include D-Flex (center , center);
-        img {
-            background-color: rgb(204, 202, 182);
-            width: 150px;
-            height: 150px;
-            border-radius: 100px;
-            border: 15px groove rgba(127, 255, 212, 0.521);
-            box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
-        }
+        height: 320vh;
     }
     .titulo-quiensoy {
-        grid-row: 2/3;
-        grid-column: 1/2;
-        border: 30px groove rgba(127, 255, 212, 0.521);
-        box-shadow: 20px 20px rgba(0, 0, 0, 0.336);
         h1 {
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
+            font-size: 3rem;
         }
     }
-    .video-youtube-cancion {
-        grid-column: 1/2;
-        grid-row: 4/5;
-        @include D-Flex (center , center);
-        iframe {
-            height: 250px;
-            width: 310px;
-            box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
-        }
-    }
-    .video-youtube-anime {
-        grid-row: 7/8;
-        grid-column: 1/2;
-        @include D-Flex (center , center);
-        iframe {
-            height: 350px;
-            width: 320px;
-            box-shadow: 30px 45px rgba(0, 0, 0, 0.336);
-        }
-    }
-    .dibujos {
-        grid-row: 6/7;
-        grid-column: 1/2;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .dibujo-rengoku {
-        img {
-            width: 270px;
-            height: 285px;
-            box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
-        }
-    }
-
-    .dibujo-ww {
-        img {
-            width: 260px;
-            height: 205px;
-            border-radius: 100px;
-            border: 10px groove rgba(127, 255, 212, 0.521);
-            box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
-        }
-    }
-
-    .texto-1-quiensoy {
-        font-size: 13px;
-        grid-column: 1/2;
-        grid-row: 3/4;
-        box-shadow: 20px 20px rgba(0, 0, 0, 0.438);
-    }
-
-    .texto-2-quiensoy {
-        font-size: 13px;
-        grid-row: 5/6;
-        grid-column: 1/2;
-        box-shadow: 20px 20px rgba(0, 0, 0, 0.438);
-    }
-
-    /*--    botones entre paginas    --*/
-    .boton-iz-quiensoy {
-        grid-row: 8/9;
-        grid-column: 1/2;
-        img {
-            width: 80px;
-            height: 80px;
-        }
-    }
-    .boton-der-quiensoy {
-        grid-row: 8/9;
-        grid-column: 1/2;
-        img {
-            width: 80px;
-            height: 80px;
-        }
-    }
-}
-
-@media screen and (min-width:550px) {
-/*--      quiensoy.html     --*/
-    .contenedor-quiensoy {
-        height: 250vh;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 0.5fr repeat(5, 0.5fr) 0.1fr;
-        row-gap: 20px;
-    }
-    
-/*--      main quiensoy.html      --*/
     .foto-mia {
-        grid-column: 1/2;
-        grid-row: 1/2;
         img {
-            width: 200px;
-            height: 200px;
+            width: 500px;
+            height: 600px;
         }
-    }
-    .titulo-quiensoy {
-        height: 350px;
-        width: 320px;
-        grid-column: 2/3;
-        grid-row: 1/2;
-        font-size: 15px;
-    }
-    .texto-1-quiensoy {
-        height: 350px;
-        width: 200px;
-        grid-column: 2/3;
-        grid-row: 2/3;
     }
     .video-youtube-cancion {
-        grid-column: 1/3;
-        grid-row: 3/4;
-        @include D-Flex (center , center);
         iframe {
-            width: 400px;
-            height: 300px;
-        }
-    }
-    .texto-2-quiensoy {
-        grid-column: 2/3;
-        grid-row: 4/5;
-        height: 350px;
-        width: 200px;
-    }
-    .dibujos {
-        grid-column: 1/3;
-        grid-row: 5/6;
-    }
-    .dibujo-rengoku {
-        img {
-            width: 240px;
-            height: 260px;
-        }
-    }
-    .dibujo-ww {
-        img {
-            width: 260px;
-            height: 200px;
-        }
-    }
-    .video-youtube-anime {
-        grid-column: 1/3;
-        grid-row: 6/7;
-        @include D-Flex (center , center);
-        iframe {
-            width: 400px;
-            height: 300px;
-        }
-    }
-/*--    botones entre paginas    --*/
-    .boton-iz-quiensoy {
-        grid-column: 1/2;
-        grid-row: 7/8;
-    }
-    .boton-der-quiensoy {
-        grid-column: 2/3;
-        grid-row: 7/8;
-    }
-}
-
-@media screen and (min-width:742px) {
-    /*--      quiensoy.html     --*/
-    .contenedor-quiensoy {
-        height: 170vh;
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 0.5fr repeat(2, 0.5fr) 0.1fr;
-        row-gap: 20px;
-    }
-    /*--      main quiensoy.html      --*/
-    .foto-mia {
-        grid-column: 1/2;
-        grid-row: 1/2;
-        @include D-Flex (center , center);
-        img {
-            width: 200px;
-            height: 200px;
-        }
-    
-    }
-    .titulo-quiensoy {
-        height: 300px;
-        width: 320px;
-        grid-column: 2/3;
-        grid-row: 1/2;
-        font-size: 15px;
-        @include D-Flex (center , center);
-    }
-    .video-youtube-cancion {
-        grid-column: 3/4;
-        grid-row: 1/2;
-        @include D-Flex (center , center);
-        iframe {
-            width: 230px;
-            height: 300px;
-        }
-    }
-    .texto-1-quiensoy {
-        height: 350px;
-        width: 200px;
-        grid-column: 3/4;
-        grid-row: 2/3;
-        font-size: 10px;
-    }
-    .texto-2-quiensoy {
-        grid-column: 3/4;
-        grid-row: 3/4;
-        height: 350px;
-        width: 200px;
-    }
-    .video-youtube-anime {
-        grid-column: 1/3;
-        grid-row: 2/3;
-        @include D-Flex (center , center);
-        iframe {
-            width: 400px;
-            height: 300px;
-        }
-    }
-    .dibujos {
-        grid-column: 1/3;
-        grid-row: 3/4;
-    }
-    
-    .dibujo-rengoku {
-        img {
-            width: 240px;
-            height: 260px;
-        }
-    }
-    .dibujo-rengoku {
-        @include D-Flex (center , center);
-    }
-    .dibujo-ww {
-        @include D-Flex (center , center);
-    }
-    .dibujo-ww {
-        img {
-            width: 260px;
-            height: 200px;
-        }
-    }
-
-    /*--    botones entre paginas    --*/
-    .boton-iz-quiensoy {
-        grid-column: 1/2;
-        grid-row: 4/5;
-        img {
-            width: 100px;
-            height: 100px;
-        }
-    }
-    .boton-der-quiensoy {
-        grid-column: 3/4;
-        grid-row: 4/5;
-        img {
-            width: 100px;
-            height: 100px;
-        }
-    }
-}
-
-@media screen and (min-width:930px) {
-    .video-youtube-cancion {
-        iframe {
-            width: 410px;
-            height: 300px;
-            box-shadow: 10px 10px rgba(0, 0, 0, 0.336);
-        }
-    }
-    .texto-1-quiensoy {
-        height: 300px;
-        width: 300px;
-        p{
-            font-size: 0.9rem;
-        }
-    }
-    .texto-2-quiensoy {
-        height: 230px;
-        width: 300px;
-        p{
-            font-size: 0.9rem;
-        }
-    }
-}
-
-@media screen and (min-width:1000px) {
-    .video-youtube-cancion {
-        iframe {
-            width: 450px;
-            height: 300px;
-        }
-    }
-
-    .titulo-quiensoy {
-        width: 350px;
-        height: 350px;
-        h1 {
-            font-size: 1.6rem;
-        }
-    }
-    .texto-1-quiensoy {
-        height: 250px;
-        width: 400px;
-        @include D-Flex (center , center);
-    }
-    .texto-2-quiensoy {
-        height: 200px;
-        width: 400px;
-        @include D-Flex (center , center);
-    }
-}
-
-@media screen and (min-width:1300px) {
-    .video-youtube-anime {
-        iframe {
-            width: 450px;
-            height: 300px;
-        }
-    }
-    .titulo-quiensoy {
-        width: 450px;
-        height: 360px;
-        h1{
-            font-size: 2.2rem;
-        }
-    }
-    .dibujo-rengoku {
-        img {
-            width: 260px;
-            height: 300px;
-        }
-    }
-    .dibujo-ww {
-        img {
-            width: 330px;
-            height: 260px;
-        }
-    }
-}
-
-@media screen and (min-width:1420px) {
-    .contenedor-quiensoy {
-        height: 81.6vh;
-        display: grid;
-        grid-template-columns: 1fr 0.5fr 0.5fr 0.2fr 1fr;
-        grid-template-rows: 1.8fr 1.7fr 1.5fr;
-    }
-    /*--      main quiensoy.html      --*/
-    .foto-mia {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        img {
-            width: 250px;
-            height: 260px;
-        }
-    }
-    .titulo-quiensoy {
-        width: 500px;
-        height: 250px;
-        grid-column: 3/4;
-        grid-row: 1/2;
-    }
-    .video-youtube-cancion {
-        grid-column: 4/5;
-        grid-row: 1/2;
-        iframe {
-            height: 250px;
-            width: 340px;
-        }
-    }
-    .texto-1-quiensoy {
-        font-size: 0.6rem;
-        grid-column: 4/5;
-        grid-row: 2/3;
-        height: 150px;
-        width: 340px;
-    }
-    .texto-2-quiensoy {
-        grid-column: 4/5;
-        grid-row: 3/4;
-        height: 150px;
-        width: 340px;
-    }
-    .video-youtube-anime {
-        grid-column: 2/3;
-        grid-row: 2/4;
-        iframe {
-            height: 300px;
-            width: 340px;
-        }
-    }
-    .dibujos {
-        grid-column: 3/4;
-        grid-row: 2/4;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .dibujo-ww {
-        img {
-            height: 270px;
-            width: 320px;
-        }
-    }
-    /*--    botones entre paginas    --*/
-    .boton-iz-quiensoy {
-        grid-column: 1/2;
-        grid-row: 1/5;
-        img{
-            width: 90px;
-            height: 90px;
-        }
-    }
-    .boton-der-quiensoy {
-        grid-column: 5/6;
-        grid-row: 1/5;
-        img{
-            width: 90px;
-            height: 90px;
-        }
-    }
-}
-
-@media screen and (min-width:1600px) {
-    .contenedor-quiensoy {
-    height: 84vh;
-    }
-    .titulo-quiensoy {
-        width: 500px;
-        height: 350px;
-        grid-column: 3/4;
-        grid-row: 1/2;
-        h1{
-            font-size: 2.5rem;
+            width: 600px;
+            height: 650px;
         }
     }
 }
