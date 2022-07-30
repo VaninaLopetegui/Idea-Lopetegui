@@ -52,10 +52,6 @@ body {
 }
 
 /*--        header                   --*/
-.header {
-  padding: 0;
-}
-
 .color {
   background-color: rgb(102, 62, 140);
 }
@@ -141,40 +137,33 @@ footer ul li a {
   }
 }
 /*--          index.html        --*/
-.logotipo-index img {
-  width: 250px;
-  height: 250px;
-}
-
 .presentacion-index {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1.3fr 1fr;
 }
 
 .titulo-index {
   grid-column: 1/2;
   grid-row: 1/2;
-  font-size: 6rem;
   font-family: "Press Start 2P";
 }
 
-.parrafo-y-button-index {
+.parrafo-index {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  padding-left: 5%;
   font-family: "Bungee";
   color: white;
   font-size: 1.1rem;
   grid-column: 1/2;
   grid-row: 2/3;
 }
-.parrafo-y-button-index span {
+.parrafo-index span {
   color: rgb(208, 230, 17);
 }
-.parrafo-y-button-index a {
+.parrafo-index a {
   text-decoration: none;
   color: white;
 }
