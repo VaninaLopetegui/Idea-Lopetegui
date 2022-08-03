@@ -12,20 +12,15 @@
     @extend .color-titulos;
 }
 .parrafo-index {
+    grid-column: 1/2;
+    grid-row: 2/3;
     @include D-Flex (flex-start , flex-start);
-    flex-direction: column;
     span {
         color: rgb(208, 230, 17);
     }
-    a {
-        text-decoration: none;
-        color: white;
-    }
     font-family: map-get($font-family, "Header-Footer");
-    color: white;
+    color: $color-textos;
     font-size: 1.1rem;
-    grid-column: 1/2;
-    grid-row: 2/3;
 }
 .button-index {
     @extend .button;
@@ -45,7 +40,7 @@
     .titulo-index {
         @include D-Flex (center , center);
         h1 {
-            font-size: 2.9rem;
+            font-size: 3.4rem;
         }
     }
     .logotipo-index {
@@ -55,7 +50,7 @@
             height: 120px;
         }
     }
-    .parrafo-y-button-index {
+    .parrafo-index {
         @include D-Flex (center , center);
         font-size: 0.8rem;
         text-align: center;
@@ -65,7 +60,18 @@
 @media screen and (min-width:600px) {
     .titulo-index {
         h1 {
-            font-size: 3rem;
+            font-size: 4.5rem;
+        }
+    }
+    .parrafo-index {
+        @include D-Flex (center , center);
+        font-size: 1rem;
+        text-align: start;
+    }
+    .logotipo-index {
+        img {
+            width: 140px;
+            height: 140px;
         }
     }
 }
@@ -95,10 +101,9 @@
             height: 150px;
         }
     }
-    .parrafo-y-button-index {
+    .parrafo-index {
         @include D-Flex (flex-start , flex-start);
-        font-size: 1rem;
-        text-align: start;
+        font-size: 0.9rem;
     }
 }
 
@@ -117,9 +122,6 @@
             height: 150px;
         }
     }
-    .parrafo-y-button-index {
-        font-size: 1.2rem;
-    }
 }
 
 @media screen and (min-width:1680px) {
@@ -136,5 +138,8 @@
     }
     .titulo-index {
         @include D-Flex (flex-start , flex-end);
+    }
+    .parrafo-index {
+        font-size: 1.1rem;
     }
 }
