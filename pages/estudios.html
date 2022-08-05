@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../img/icon.png">
@@ -49,43 +50,50 @@
     </div>
 </header>
 <!--            main                -->
-    <main class="contenedor-estudios">
-        <section class="titulo-estudios">
-            <h1>¡Mis Estudios!</h1>
-        </section>
-        <section class="subtitulo-tabla-estudios">
-            <div class="subtitulo-1">
-                <h2>Estudios Primarios</h2>
-            </div>
-            <div class="subtitulo-2">
-                <h2>Estudios Terciarios</h2>
-            </div>
-        </section>
-        <section class="lista-tabla-estudios">
-            <div class="lista-1">
-                <ul>
-                    <li>Escuela completa
-                        <p>cursado en Maldonado desde 2009 hasta 2014</p>
-                    </li>
-                    <li>Secundaria completa
-                        <p>Aprobado con 6to de medicina, cursado desde 2015 hasta 2018 en Maldonado y desde 2019 hasta 2021 en Tranqueras, Rivera.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="lista-2">
-                <ul>
-                    <p>Carrera de Desarrollo Web <br>
-                        En <span>CoderHouse</span> desde 2022... Lo que cursé hasta la fecha es html y css.Aprendido hasta la fecha:
-                    </p>
-                    <li>HTML</li>
-                    <li>FlexBox</li>
-                    <li>Grids</li>
-                    <li>GIT</li>
-                    <li>Bootstrap</li>
-                    <li>Sass</li>
-                </ul>
-            </div>
+    <main class="contenedor__generalEstudios">
+        <section class="contenedor__misEstudios">
+            <section class="titulo-estudios">
+                <h1>¡Mis Estudios!</h1>
+            </section>
+            <section class="contenedor__listas">
+                <article class="lista-1-estudios">
+                    <div class="lista-1__titulo">
+                        <i class="bi bi-book lista-1__icono"></i>
+                        <h2>Estudios primarios</h2>
+                    </div>
+                    <div class="lista-1__contenido">
+                        <ul>
+                            <li><span>Escuela completa</span> 
+                                cursado en Maldonado desde 2009 hasta 2014
+                            </li>
+                            <li><span>Secundaria completa</span>
+                                Aprobado con 6to de medicina, cursado desde 2015 hasta 2018 en Maldonado y desde 2019 hasta 2021 en Tranqueras, Rivera.
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="contenedor__gif">
+                    <img class="gif__Estudios" src="../img/gatito triste con vinito.gif" alt="gif de gatito con copa de vino triste">
+                </article>
+                <article class="lista-2-estudios">
+                    <div class="lista-2__titulo">
+                        <i class="bi bi-book lista-2__icono"></i>
+                        <h2>Estudios secundarios</h2>
+                    </div>
+                    <div class="lista-2__contenido">
+                        <ul>
+                            <span>Carrera de Desarrollo Web
+                            En curso desde CoderHouse empezado en 2022... 
+                            Aprendido hasta la fecha:
+                            </span>
+                            <li>HTML</li>
+                            <li>Css</li>
+                            <li>GIT (manejo de consola, sass) </li>
+                        </ul>
+                    </div>
+                    <div class="lista-2__contenido"></div>
+                </article>
+            </section>
         </section>
         <section class="boton-iz-estudios">
             <a href="./quiensoy.html">
@@ -102,13 +110,19 @@
     <footer>
         <ul class="footer-ul">
             <li>
-                <a href="https://www.facebook.com/vanina.lopetegui" target="_blank">Facebook</a>
+                <a href="https://www.facebook.com/vanina.lopetegui" target="_blank">
+                    <i class="bi bi-facebook icons__footer"></i>
+                </a>
             </li>
             <li>
-                <a href="https://www.instagram.com/nina_lopetegui/" target="_blank">Instagram</a>
+                <a href="https://www.instagram.com/nina_lopetegui/" target="_blank">
+                    <i class="bi bi-instagram icons__footer"></i>
+                </a>
             </li>
             <li>
-                <a href="https://discord.gg/VQjVYtT8zV" target="_blank">Discord</a> 
+                <a href="https://discord.gg/VQjVYtT8zV" target="_blank">
+                    <i class="bi bi-discord icons__footer"></i>
+                </a> 
             </li>
         </ul>
     </footer>

@@ -9,7 +9,7 @@ body {
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
-.color-titulos, .nombres-de-formulario p, .titulo-contacto, .subtitulo-2, .subtitulo-1, .titulo-estudios, .texto-2-quiensoy, .titulo-quiensoy, .titulo-index {
+.color-titulos, .nombres-de-formulario p, .titulo-contacto, .contenedor__misEstudios .contenedor__listas .lista-2__titulo h2, .contenedor__misEstudios .contenedor__listas .lista-1__contenido ul li, .contenedor__misEstudios .contenedor__listas .lista-2__contenido ul li, .contenedor__misEstudios .contenedor__listas .lista-1__contenido span, .contenedor__misEstudios .contenedor__listas .lista-2__contenido span, .contenedor__misEstudios .contenedor__listas .lista-1__titulo h2, .contenedor__misEstudios .titulo-estudios, .texto-2-quiensoy, .titulo-quiensoy, .titulo-index {
   color: white;
 }
 
@@ -617,92 +617,71 @@ footer ul li a {
     border-radius: 25%;
   }
 }
-/*--      estudios.html      --*/
-.contenedor-estudios {
-  height: 82.1vh;
+.contenedor__generalEstudios {
+  height: 84vh;
   display: grid;
-  grid-template-columns: 1fr 3.5fr 3.5fr 1fr;
-  grid-template-rows: 1fr 1fr 4fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
-.titulo-estudios {
-  grid-column: 2/4;
-  grid-row: 1/2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
+.contenedor__misEstudios {
+  grid-column: 2/3;
+  background: rgba(59, 59, 59, 0.3960784314);
+  border-radius: 15px;
+  box-shadow: 60px 30px 5px 0px rgba(0, 0, 0, 0.568);
+  width: 1100px;
+  height: 500px;
+}
+.contenedor__misEstudios .contenedor__gif .gif__Estudios {
+  border-radius: 50%;
+  box-shadow: 0px 50px 5px 0px rgba(0, 0, 0, 0.568);
+}
+.contenedor__misEstudios .titulo-estudios {
+  text-align: center;
+  text-shadow: 10px 10px 10px rgb(0, 0, 0);
   font-family: "Press Start 2P";
 }
-
-.subtitulo-1 {
-  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-  border: 10px groove rgba(127, 255, 212, 0.521);
+.contenedor__misEstudios .titulo-estudios h1 {
+  font-size: 2.5rem;
+}
+.contenedor__misEstudios .contenedor__listas {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  padding: 5%;
 }
-
-.subtitulo-2 {
-  border: 10px groove rgba(127, 255, 212, 0.521);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 5%;
-  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-}
-
-.titulo-estudios h1 {
-  border: 20px groove rgba(127, 255, 212, 0.521);
-  border-radius: 50px;
-}
-
-.subtitulo-tabla-estudios {
-  background-color: rgb(21, 57, 68);
-  grid-column: 2/4;
-  grid-row: 2/3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.contenedor__misEstudios .contenedor__listas .lista-1__titulo h2 {
   font-family: "Lemonada";
+  font-size: 1.8rem;
+  text-shadow: 10px 10px 10px rgb(0, 0, 0);
 }
-
-.lista-tabla-estudios {
-  grid-column: 2/4;
-  grid-row: 3/4;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.contenedor__misEstudios .contenedor__listas .lista-1__icono, .contenedor__misEstudios .contenedor__listas .lista-2__icono {
+  padding-left: 45%;
+  font-size: 40px;
+  color: rgb(208, 230, 17);
 }
-
-.lista-1 {
-  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-  border: 10px groove rgba(127, 255, 212, 0.521);
-  display: flex;
-  justify-content: flex-start;
-  font-size: 1rem;
+.contenedor__misEstudios .contenedor__listas .lista-1__contenido, .contenedor__misEstudios .contenedor__listas .lista-2__contenido {
   font-family: "Lemonada";
-  padding: 10%;
+  color: rgba(0, 0, 0, 0.726);
+  font-size: 13px;
 }
-.lista-1 ul li {
+.contenedor__misEstudios .contenedor__listas .lista-1__contenido span, .contenedor__misEstudios .contenedor__listas .lista-2__contenido span {
+  font-size: 20px;
+}
+.contenedor__misEstudios .contenedor__listas .lista-1__contenido ul li, .contenedor__misEstudios .contenedor__listas .lista-2__contenido ul li {
+  white-space: pre-line;
   list-style-type: "😺";
 }
-
-.lista-2 {
-  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-  border: 10px groove rgba(127, 255, 212, 0.521);
-  display: flex;
-  justify-content: flex-start;
-  font-size: 1rem;
+.contenedor__misEstudios .contenedor__listas .lista-2__contenido span {
+  font-size: 15px;
+}
+.contenedor__misEstudios .contenedor__listas .lista-2__titulo h2 {
   font-family: "Lemonada";
-  padding: 10%;
+  font-size: 1.8rem;
+  text-shadow: 10px 10px 10px rgb(0, 0, 0);
 }
-.lista-2 ul li {
-  list-style-type: "😺";
-}
-
 .boton-iz-estudios {
   grid-column: 1/2;
-  grid-row: 1/4;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -714,7 +693,7 @@ footer ul li a {
 }
 
 .boton-der-estudios {
-  grid-column: 4/5;
+  grid-column: 3/4;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -725,130 +704,6 @@ footer ul li a {
   height: 100px;
 }
 
-@media screen and (min-width: 320px) {
-  /*--      estudios.html      --*/
-  .contenedor-estudios {
-    height: 120vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.1fr 0.3fr 1fr;
-  }
-  .titulo-estudios {
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-  .titulo-estudios h1 {
-    font-size: 1.2rem;
-  }
-  .subtitulo-1 h2 {
-    font-size: 1.3rem;
-  }
-  .subtitulo-2 h2 {
-    font-size: 1.3rem;
-  }
-  .subtitulo-tabla-estudios {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .lista-tabla-estudios {
-    grid-column: 1/3;
-    grid-row: 3/4;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .lista-1 {
-    font-size: 0.6rem;
-  }
-  .lista-2 {
-    font-size: 0.6rem;
-    overflow: auto;
-  }
-  .boton-iz-estudios {
-    grid-column: 1/2;
-    grid-row: 4/5;
-  }
-  .boton-iz-estudios img {
-    width: 80px;
-    height: 80px;
-  }
-  .boton-der-estudios {
-    grid-column: 2/3;
-    grid-row: 4/5;
-  }
-  .boton-der-estudios img {
-    width: 80px;
-    height: 80px;
-  }
-}
-@media screen and (min-width: 600px) {
-  .titulo-estudios h1 {
-    font-size: 1.8rem;
-  }
-  .lista-1 {
-    font-size: 0.8rem;
-  }
-  .lista-2 {
-    font-size: 0.8rem;
-    overflow: auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contenedor-estudios {
-    height: 81.6vh;
-    display: grid;
-    grid-template-columns: 0.5fr 3fr 0.5fr;
-    grid-template-rows: 0.7fr 0.3fr;
-  }
-  .titulo-estudios {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-  .titulo-estudios h1 {
-    font-size: 2.2rem;
-  }
-  .subtitulo-tabla-estudios {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .lista-tabla-estudios {
-    height: 360px;
-    grid-column: 2/3;
-    grid-row: 3/4;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .boton-iz-estudios {
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-  .boton-der-estudios {
-    grid-column: 3/4;
-    grid-row: 3/4;
-  }
-}
-@media screen and (min-width: 1600px) {
-  .contenedor-estudios {
-    height: 84vh;
-    display: grid;
-    grid-template-rows: 0.4fr 0.4fr;
-  }
-  .subtitulo-tabla-estudios h2 {
-    font-size: 1.5rem;
-  }
-  .lista-tabla-estudios {
-    height: 400px;
-  }
-  .lista-tabla-estudios ul li {
-    font-size: 1rem;
-  }
-  .lista-tabla-estudios p {
-    font-size: 1rem;
-  }
-}
 .contenedor-form {
   background: rgba(59, 59, 59, 0.3960784314);
   border-radius: 15px;
