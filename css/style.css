@@ -9,7 +9,7 @@ body {
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
-.color-titulos, .nombres-de-formulario p, .titulo-contacto, .contenedor__misEstudios .contenedor__listas .lista-2__titulo h2, .contenedor__misEstudios .contenedor__listas .lista-1__contenido ul li, .contenedor__misEstudios .contenedor__listas .lista-2__contenido ul li, .contenedor__misEstudios .contenedor__listas .lista-1__contenido span, .contenedor__misEstudios .contenedor__listas .lista-2__contenido span, .contenedor__misEstudios .contenedor__listas .lista-1__titulo h2, .contenedor__misEstudios .titulo-estudios, .texto-2-quiensoy, .titulo-quiensoy, .titulo-index {
+.color-titulos, .nombres-de-formulario p, .titulo-contacto, .contenedor__misEstudios .contenedor__listas .lista-2__titulo h2, .contenedor__misEstudios .contenedor__listas .lista-1__contenido ul li, .contenedor__misEstudios .contenedor__listas .lista-2__contenido ul li, .contenedor__misEstudios .contenedor__listas .lista-1__contenido span, .contenedor__misEstudios .contenedor__listas .lista-2__contenido span, .contenedor__misEstudios .contenedor__listas .lista-1__titulo h2, .contenedor__misEstudios .titulo-estudios, .texto-2-quiensoy, .titulo-quiensoy, .titulo-index, .button input, .button-index input {
   color: white;
 }
 
@@ -30,6 +30,12 @@ body {
   font-weight: 600;
   letter-spacing: 2px;
   transition: all 0, 3s;
+}
+.button input, .button-index input {
+  font-family: "Lemonada";
+  background-color: rgba(63, 63, 63, 0.5411764706);
+  border: none;
+  border-radius: 25%;
 }
 .button::before, .button-index::before {
   content: "";
@@ -93,18 +99,16 @@ footer {
   width: 100%;
   top: 95%;
 }
-footer ul li a {
-  font-size: 1rem;
-}
 
 .footer-ul li {
   display: inline-block;
   padding: 10px 10px;
 }
 .footer-ul li a {
-  text-decoration: none;
   color: white;
-  font-family: "Bungee";
+}
+.footer-ul li a .icons__footer {
+  font-size: 1.3rem;
 }
 .footer-ul li a:hover {
   color: rgb(208, 230, 17);
@@ -116,24 +120,6 @@ footer ul li a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-  }
-  footer ul li a {
-    font-size: 0.7rem;
-  }
-}
-@media screen and (min-width: 600px) {
-  footer {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 30px;
-  }
-  footer ul li a {
-    font-size: 0.8rem;
-  }
-}
-@media screen and (min-width: 1204px) {
-  footer {
-    font-size: 0.8rem;
   }
 }
 /*--          index.html        --*/
@@ -285,26 +271,34 @@ footer ul li a {
 .contenedor-quiensoy {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-areas: "titulo" "foto" "presentacion" "musica" "presentacion2" "botones";
-  height: 275vh;
+  grid-template-rows: 0.3fr repeat(5, 1fr);
+  height: 290vh;
   background-color: rgba(74, 39, 156, 0.445);
 }
 
 .titulo-quiensoy {
-  grid-area: "titulo";
+  grid-column: 1/2;
+  grid-row: 1/2;
   text-shadow: 10px 10px 10px rgb(0, 0, 0);
+  padding-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Press Start 2P";
 }
 .titulo-quiensoy h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.4rem;
+  background: rgba(59, 59, 59, 0.3960784314);
+  border-radius: 15px;
+  box-shadow: 10px 30px 5px 0px rgba(0, 0, 0, 0.336);
 }
 
 .foto-mia {
-  grid-area: "foto";
+  grid-column: 1/2;
+  grid-row: 2/3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -315,16 +309,22 @@ footer ul li a {
   width: 270px;
   object-fit: cover;
   border-radius: 2%;
+  box-shadow: 30px 50px 30px 0px rgba(0, 0, 0, 0.336);
 }
 
 .texto-1-quiensoy, .texto-2-quiensoy, .video-youtube-cancion {
-  grid-area: "presentacion";
+  grid-column: 1/2;
+  grid-row: 3/4;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.712);
-  border-radius: 10px;
   font-family: "Lemonada";
   color: white;
   font-size: 1rem;
   text-align: center;
+}
+.texto-1-quiensoy p, .texto-2-quiensoy p, .video-youtube-cancion p {
+  background: rgba(59, 59, 59, 0.3960784314);
+  border-radius: 15px;
+  box-shadow: 10px 30px 5px 0px rgba(0, 0, 0, 0.336);
 }
 .texto-1-quiensoy span, .texto-2-quiensoy span, .video-youtube-cancion span {
   font-family: "Press Start 2P";
@@ -333,21 +333,26 @@ footer ul li a {
 }
 
 .video-youtube-cancion {
-  border-top: 10px solid rgba(0, 0, 0, 0.452);
-  grid-area: "musica";
+  grid-column: 1/2;
+  grid-row: 4/5;
+  padding-top: 10%;
 }
 .video-youtube-cancion p {
   font-size: 1rem;
+  background: rgba(59, 59, 59, 0.3960784314);
+  border-radius: 15px;
+  box-shadow: 10px 30px 5px 0px rgba(0, 0, 0, 0.336);
 }
 .video-youtube-cancion iframe {
   object-fit: cover;
   height: 300px;
   width: 270px;
+  box-shadow: 30px 50px 30px 0px rgba(0, 0, 0, 0.336);
 }
 
 .texto-2-quiensoy {
-  border-top: 10px solid rgba(0, 0, 0, 0.452);
-  grid-area: "presentacion2";
+  grid-column: 1/2;
+  grid-row: 5/6;
   font-family: "Lemonada";
   text-align: center;
 }
@@ -357,16 +362,16 @@ footer ul li a {
 }
 
 .dibujo-ww, .dibujo-rengoku {
-  height: 300px;
+  box-shadow: 30px 50px 30px 0px rgba(0, 0, 0, 0.336);
+  height: 260px;
   width: 270px;
-  padding-bottom: 5%;
   object-fit: cover;
   border-radius: 5%;
-  border-radius: 2%;
 }
 
 .botones-next-quiensoy {
-  grid-area: "botones";
+  grid-column: 1/2;
+  grid-row: 6/7;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -388,7 +393,7 @@ footer ul li a {
 }
 @media screen and (min-width: 620px) {
   .contenedor-quiensoy {
-    height: 400vh;
+    height: 480vh;
   }
   .titulo-quiensoy h1 {
     font-size: 2.8rem;
@@ -411,7 +416,7 @@ footer ul li a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 0.5fr repeat(2, 1fr);
-    height: 400vh;
+    height: 460vh;
   }
   .titulo-quiensoy {
     grid-column: 1/3;
@@ -419,7 +424,6 @@ footer ul li a {
   }
   .foto-mia {
     border-radius: 10%;
-    border-top: 10px solid rgba(0, 0, 0, 0.452);
     grid-column: 1/2;
     grid-row: 2/3;
   }
@@ -429,7 +433,6 @@ footer ul li a {
   }
   .texto-1-quiensoy, .video-youtube-cancion, .texto-2-quiensoy {
     border-radius: 10%;
-    border-top: 10px solid rgba(0, 0, 0, 0.452);
     grid-column: 2/3;
     grid-row: 2/4;
     display: flex;
@@ -470,7 +473,7 @@ footer ul li a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
-    height: 320vh;
+    height: 345vh;
   }
   .titulo-quiensoy {
     grid-column: 1/4;
@@ -490,7 +493,7 @@ footer ul li a {
     grid-row: 2/3;
   }
   .texto-1-quiensoy p, .video-youtube-cancion p, .texto-2-quiensoy p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .texto-1-quiensoy span, .video-youtube-cancion span, .texto-2-quiensoy span {
     font-size: 1.6rem;
@@ -534,7 +537,6 @@ footer ul li a {
 }
 @media screen and (min-width: 1250px) {
   .foto-mia {
-    border-top: 10px solid rgba(0, 0, 0, 0.452);
     padding-top: 10%;
   }
   .foto-mia img {
@@ -574,6 +576,12 @@ footer ul li a {
   }
 }
 @media screen and (min-width: 1500px) {
+  .contenedor-quiensoy {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.5fr 0.5fr;
+    height: 340vh;
+  }
   .titulo-quiensoy h1 {
     font-size: 3rem;
   }
@@ -583,7 +591,6 @@ footer ul li a {
   }
   .texto-1-quiensoy p, .video-youtube-cancion p, .texto-2-quiensoy p {
     border-radius: 10%;
-    border-top: 10px solid rgba(0, 0, 0, 0.452);
     font-size: 1rem;
     line-height: 40px;
   }
@@ -600,7 +607,6 @@ footer ul li a {
   }
   .video-youtube-cancion iframe {
     border-radius: 5%;
-    border-bottom: 15px solid rgba(0, 0, 0, 0.452);
   }
   .texto-2-quiensoy {
     padding-left: 400px;
@@ -611,10 +617,17 @@ footer ul li a {
   }
   .texto-2-quiensoy p {
     border-radius: 10%;
-    border-top: 10px solid rgba(0, 0, 0, 0.452);
     padding-right: 25%;
     padding-left: 25%;
     border-radius: 25%;
+  }
+  .boton-der-quiensoy {
+    padding-right: 5px;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .contenedor-quiensoy {
+    height: 278vh;
   }
 }
 .contenedor__generalEstudios {
@@ -724,7 +737,7 @@ footer ul li a {
   font-family: "Lemonada";
 }
 
-.nombres-de-formulario input {
+.nombres-de-formulario .input {
   border: 5px rgb(190, 186, 186) solid;
   border-radius: 10px;
 }
@@ -742,7 +755,7 @@ textarea {
 
 @media screen and (min-width: 320px) {
   .contenedor-contacto {
-    height: 155vh;
+    height: 190vh;
   }
   .imagen-form img {
     width: 250px;
@@ -797,9 +810,6 @@ textarea {
   }
 }
 @media screen and (min-width: 1200px) {
-  .contenedor-contacto {
-    height: 93vh;
-  }
   .titulo-contacto h1 {
     font-size: 2rem;
   }
@@ -813,6 +823,11 @@ textarea {
   .imagen-form img {
     width: 500px;
     height: 550px;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .contenedor-contacto {
+    height: 84vh;
   }
 }
 .contenedor-extra-info {

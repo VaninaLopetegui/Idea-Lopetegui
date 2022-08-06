@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../img/icon.png">
@@ -62,22 +63,23 @@
                         </div>
                         <label class="nombres-de-formulario">
                             <p>Nombre</p>
-                            <input type="text" placeholder="escribi acá tu nombre">
+                            <input class="input" type="text" placeholder="escribi acá tu nombre">
                         </label>
                         <label class="nombres-de-formulario">
                             <p>Tu gmail</p>
-                            <input type="mail" placeholder="@gmail.com">
+                            <input class="input" type="mail" placeholder="@gmail.com">
                         </label>
                         <label class="d-flex flex-column nombres-de-formulario">
                             <p>Dejame un comentario!</p>
                             <textarea name="Comentario" id="" cols="70" rows="12"></textarea>
                             <div class="d-flex flex-row p-2 botones">
                                 <button class="button">
-                                    <span>enviar</span>
+                                    <input type="submit" value="enviar">
                                 </button>
                                 <button class="button">
-                                    <span>borrar lo escrito</span>
+                                    <input type="reset" value="borrar lo escrito?">
                                 </button>
+
                             </div>
                         </label>
                     </fieldset>
@@ -90,17 +92,23 @@
             </a>
         </div>
     </main>
-    <!--               footer        -->
+<!--               footer        -->
     <footer>
         <ul class="footer-ul">
             <li>
-                <a href="https://www.facebook.com/vanina.lopetegui" target="_blank">Facebook</a>
+                <a href="https://www.facebook.com/vanina.lopetegui" target="_blank">
+                    <i class="bi bi-facebook icons__footer"></i>
+                </a>
             </li>
             <li>
-                <a href="https://www.instagram.com/nina_lopetegui/" target="_blank">Instagram</a>
+                <a href="https://www.instagram.com/nina_lopetegui/" target="_blank">
+                    <i class="bi bi-instagram icons__footer"></i>
+                </a>
             </li>
             <li>
-                <a href="https://discord.gg/VQjVYtT8zV" target="_blank">Discord</a> 
+                <a href="https://discord.gg/VQjVYtT8zV" target="_blank">
+                    <i class="bi bi-discord icons__footer"></i>
+                </a> 
             </li>
         </ul>
     </footer>
