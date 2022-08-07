@@ -1,17 +1,13 @@
 .contenedor__generalEstudios {
-    height: 84vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    height: 160vh;
 }
 .contenedor__misEstudios {
-    grid-column: 2/3;
+    height: 970px;
     background: #3b3b3b65;
     border-radius: 15px;
     box-shadow: 60px 30px 5px 0px rgba(0, 0, 0, 0.568);
-    width: 1100px;
-    height: 500px;
     .contenedor__gif {
+        @include D-Flex ( center, center );
         .gif__Estudios {
             border-radius: 50%;
             box-shadow: 0px 50px 5px 0px rgba(0, 0, 0, 0.568);
@@ -19,30 +15,29 @@
     }
     .titulo-estudios {
         text-align: center;
+        padding-top: 10%;
         text-shadow: 10px 10px 10px rgb(0, 0, 0);
         @extend .color-titulos;
         font-family: map-get($font-family, "Titulos");
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
     }
     .contenedor__listas {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
         .lista-1__titulo h2{
+            text-align: center;
             font-family: map-get($font-family, "Textos");
             font-size: 1.8rem;
             text-shadow: 10px 10px 10px rgb(0, 0, 0);
             @extend .color-titulos;
         }
         .lista-1__icono {
-            padding-left: 45%;
+            padding-left: 48%;
             font-size: 40px;
             color: rgb(208, 230, 17);
         }
         .lista-1__contenido {
+            text-align: center;
             font-family: map-get($font-family, "Textos");
             color: rgba(0, 0, 0, 0.726);
             font-size: 13px;
@@ -52,7 +47,6 @@
             }
             ul {
                 li {
-                    white-space: pre-line;
                     @extend .color-titulos;
                     list-style-type: '😺';
                 }
@@ -60,15 +54,17 @@
         }
         .lista-2__contenido {
             @extend .lista-1__contenido;
+            text-align: initial;
             span {
                 font-size: 15px;
                 @extend .color-titulos;
             }
         }
         .lista-2__titulo h2{
+            text-align: center;
             @extend .color-titulos;
             font-family: map-get($font-family, "Textos");
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             text-shadow: 10px 10px 10px rgb(0, 0, 0);
         }
         .lista-2__icono {
@@ -77,21 +73,131 @@
     }
 } 
 //          botones de estudios.html          //
+.botones-next-estudios {
+    @include D-Flex (space-between , center);
+}
 .boton-iz-estudios {
-    grid-column: 1/2;
-    @include D-Flex (flex-start , flex-end);
-    padding: 5%;
     img {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
     }
 }
 .boton-der-estudios {
-    grid-column: 3/4;
-    @include D-Flex (flex-end , flex-end);
-    padding-right: 5%;
-    img {
-        width: 100px;
-        height: 100px;
+    @extend .boton-iz-estudios
+}
+
+@media screen and (min-width: 600px) {
+    .contenedor__generalEstudios {
+        height: 150vh;
+    }
+    .contenedor__misEstudios {
+        .titulo-estudios {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .lista-1__contenido {
+        font-size: 15px;
+    }
+    .boton-iz-estudios {
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .lista-1__contenido {
+        span {
+            font-size: 25px;
+        }
+        ul {
+            li {
+                list-style-type: '😺';
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .contenedor__generalEstudios {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding-top: 50px;
+    }
+    .contenedor__misEstudios {
+        grid-column: 2/3;
+        width: 1100px;
+        height: 500px;
+        .contenedor__gif {
+            .gif__Estudios {
+                border-radius: 50%;
+                box-shadow: 0px 23px 5px 0px rgba(0, 0, 0, 0.568);
+            }
+        }
+        .titulo-estudios {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+        .contenedor__listas {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            .lista-1__titulo h2{
+                font-size: 1.7rem;
+            }
+            .lista-1__icono {
+                padding-left: 45%;
+                font-size: 40px;
+            }
+            .lista-1__contenido {
+                font-size: 13px;
+                span {
+                    font-size: 20px;
+                }
+                ul {
+                    li {
+                        white-space: pre-line;
+                    }
+                }
+            }
+            .lista-2__contenido {
+                span {
+                    font-size: 15px;
+                }
+            }
+            .lista-2__titulo h2{
+                font-size: 1.7rem;
+            }
+        }
+    } 
+    //          botones de estudios.html          //
+    .botones-next-estudios {
+        grid-column: 1/4;
+    }
+    .boton-iz-estudios {
+        grid-column: 1/2;
+        @include D-Flex (flex-start , flex-end);
+        padding: 2%;
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .boton-der-estudios {
+        grid-column: 3/4;
+        @include D-Flex (flex-end , flex-end);
+        padding-right: 2%;
+        img {
+            width: 100px;
+            height: 100px;
+        }
     }
 }

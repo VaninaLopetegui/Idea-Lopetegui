@@ -2,7 +2,7 @@
 .contenedor-quiensoy {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr repeat(5, 1fr);
+    grid-template-rows: 0.3fr repeat(5, 0.8fr);
     height: 290vh;
     background-color:  rgba(74, 39, 156, 0.445) ;
 }
@@ -111,6 +111,12 @@
 }
 
 @media screen and (min-width:400px ) {
+    .contenedor-quiensoy {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr repeat(5, 0.4fr);
+        height: 270vh;
+    }
     .titulo-quiensoy {
         h1 {
             font-size: 1.8rem;
@@ -126,7 +132,10 @@
 
 @media screen and (min-width:620px) {
     .contenedor-quiensoy {
-        height: 480vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr repeat(5, 0.2fr);
+        height: 400vh;
     }
     .titulo-quiensoy {
         h1 {
@@ -155,8 +164,8 @@
     .contenedor-quiensoy {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 0.5fr repeat(2,1fr);
-        height: 460vh;
+        grid-template-rows: 0.4fr 1fr 0.5fr repeat(2,1fr);
+        height: 380vh;
     }
     .titulo-quiensoy {
         grid-column: 1/3;
@@ -207,8 +216,8 @@
     .contenedor-quiensoy {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
-        height: 345vh;
+        grid-template-rows: 0.3fr 0.5fr 0.3fr 0.5fr;
+        height: 335vh;
     }
     .titulo-quiensoy {
         grid-column: 1/4;
