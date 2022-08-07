@@ -104,10 +104,18 @@
     img {
         width: 80px;
         height: 80px;
+        object-fit: contain;
+        transition: all 0.4s;
     }
 }
 .boton-der-quiensoy {
     @extend .boton-iz-quiensoy
+}
+.logotipo-index {
+    img {
+        object-fit: contain;
+        transition: all 0.4s;
+    }
 }
 
 @media screen and (min-width:400px ) {
@@ -374,6 +382,6 @@
 
 @media screen and (min-width:1800px) {
     .contenedor-quiensoy {
-        height: 278vh;
+        height: 300vh;
     }
 }

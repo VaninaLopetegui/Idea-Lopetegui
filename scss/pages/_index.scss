@@ -22,12 +22,11 @@
     color: $color-textos;
     font-size: 1.1rem;
 }
-.button-index {
-    @extend .button;
-    &:hover {
-        background:  rgb(122, 134, 14);
+.logotipo-index {
+    img {
+        object-fit: contain;
+        transition: all 0.4s;
     }
-    border-radius: 50px;
 }
 
 @media screen and (min-width:320px) {
@@ -89,8 +88,6 @@
     }
     .titulo-index {
         @include D-Flex (flex-start , flex-end);
-    }
-    .titulo-index {
         h1 {
             font-size: 4.2rem;
         }

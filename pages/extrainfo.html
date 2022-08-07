@@ -52,9 +52,12 @@
         </div>
     </header>
     <!--            main                -->
-    <main class="contenedor-extra-info">
-        <div id="carouselExampleCaptions" class="carousel slide w-100 h-100" data-bs-ride="false ">
-            <div class="carousel-indicators ">
+    <main class="contenedor-extra-info d-flex justify-content-center align-items-center">
+        <section class="titulo__extra-info">
+            <h1>Un poco más acerca de mí!</h1>
+        </section>
+        <section id="carouselExampleCaptions" class="carousel slide w-75" data-bs-ride="false ">
+            <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
@@ -62,52 +65,39 @@
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-inner w-100">
+            <div class="carousel-inner overflow-hidden">
                 <div class="carousel-item active">
-                    <img src="../img/lucy.jpeg" class="d-block w-25" alt="Una foto de mi perra mascota Lucy">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                    <img class="d-block img-carousel" src="../img/lucy.jpeg" alt="Una foto de mi perra mascota Lucy">
+                    <div class="carousel-caption d-none d-md-block color__carouselTextos">
+                        <h5>Mi única mascota Lucy 🐶</h5>
+                        <p>La Lucy vino a casa cuando yo solo tenía 5 años, compartí muchísimo con ella y siento que fue lo mejor de mi infancia.</p>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="../img/pablito.jpeg" class="d-block w-25" alt="Una foto de mi gato sobrino Pablo">
-                    <div class="carousel-caption d-none d-md-block ">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                <div class="carousel-item w-100 ">
+                    <img class="d-block img-carousel" src="../img/pablito.jpeg" alt="Una foto de mi gato sobrino Pablo">
+                    <div class="carousel-caption d-none d-md-block color__carouselTextos">
+                        <h5>Pablo mi sobrino 🐱</h5>
+                        <p>Pablo es el gato de mi hermano que actualmente (2022) tiene 5 años, un gatito muy cariñoso y hermoso</p>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="../img/lebron.jpeg" class="d-block w-25" alt="Una foto de mi gato sobrino Lebron">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                <div class="carousel-item w-100">
+                    <img class="d-block img-carousel" src="../img/lebron.jpeg" alt="Una foto de mi gato sobrino Lebron">
+                    <div class="carousel-caption d-none d-md-block color__carouselTextos">
+                        <h5>Lebron mi sobrino favorito 🐱</h5>
+                        <p>Lebron es el otro gato de mi hermano que siento que tengo más afinidad con el porque siempre está conmigo</p>
                     </div>
-                    <div class="carousel-item">
-                        <img src="../img/familia.jpeg" class="d-block w-25" alt="Mi hermano, mi mamá y yo">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../img/familia2.jpeg" class="d-block w-25"
-                                alt="Mi papá, mamá y mi hermano conmigo">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
     </main>
 <!--               footer        -->
     <footer>
